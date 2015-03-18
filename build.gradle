@@ -1,20 +1,5 @@
-apply plugin: 'maven'
-apply plugin: 'java'
-apply plugin: 'signing'
-
-sourceCompatibility = 1.7
-targetCompatibility = 1.8
-
-
-group = "me.adaptive"
-archivesBaseName = "adaptive-arp-lib"
-
 def ossrhUsername = hasProperty('ossrhUsername') ? ossrhUsername : System.getenv('ossrhUsername')
 def ossrhPassword = hasProperty('ossrhPassword') ? ossrhPassword : System.getenv('ossrhPassword')
-ext."signing.keyId" = hasProperty('signing.keyId') ? ext."signing.keyId" : System.getenv('signing_keyId')
-ext."signing.password"  = hasProperty('signing.password') ? ext."signing.password" : System.getenv('signing_password')
-ext."signing.secretKeyRingFile"  = hasProperty('signing.secretKeyRingFile') ? ext."signing.secretKeyRingFile" : System.getenv('signing_secretKeyRingFile')
-
 def getVersionName = { ->
     def stdout = new ByteArrayOutputStream()
     exec {
@@ -23,7 +8,33 @@ def getVersionName = { ->
     }
     return stdout.toString().trim().substring(0, stdout.toString().trim().indexOf('-'))
 }
+ext."signing.keyId" = hasProperty('signing.keyId') ? ext."signing.keyId" : System.getenv('signing_keyId')
+ext."signing.password"  = hasProperty('signing.password') ? ext."signing.password" : System.getenv('signing_password')
+ext."signing.secretKeyRingFile"  = hasProperty('signing.secretKeyRingFile') ? ext."signing.secretKeyRingFile" : System.getenv('signing_secretKeyRingFile')
 
+buildscript {
+    ext."oss-releases.username" = ossrhUsername
+    ext."oss-releases.password" = ossrhPassword
+    ext."oss-releases.url" = "https://oss.sonatype.org/index.html#stagingRepositories"
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.adaptc.gradle:nexus-workflow:0.6'
+    }
+}
+
+apply plugin: 'nexus-workflow'
+apply plugin: 'maven'
+apply plugin: 'java'
+apply plugin: 'signing'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.8
+
+group = "me.adaptive"
+archivesBaseName = "adaptive-arp-lib"
 version = getVersionName()
 
 repositories {
