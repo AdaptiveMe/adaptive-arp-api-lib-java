@@ -11,9 +11,9 @@ archivesBaseName = "adaptive-arp-lib"
 
 def ossrhUsername = hasProperty('ossrhUsername') ? ossrhUsername : System.getenv('ossrhUsername')
 def ossrhPassword = hasProperty('ossrhPassword') ? ossrhPassword : System.getenv('ossrhPassword')
-ext."signing.keyId" = hasProperty('signing.keyId') ? ext."signing.keyId" : System.getenv('signing.keyId')
-ext."signing.password"  = hasProperty('signing.password') ? ext."signing.password" : System.getenv('signing.password')
-ext."signing.secretKeyRingFile"  = hasProperty('signing.secretKeyRingFile') ? ext."signing.secretKeyRingFile" : System.getenv('signing.secretKeyRingFile')
+ext."signing.keyId" = hasProperty('signing.keyId') ? ext."signing.keyId" : System.getenv('signing_keyId')
+ext."signing.password"  = hasProperty('signing.password') ? ext."signing.password" : System.getenv('signing_password')
+ext."signing.secretKeyRingFile"  = hasProperty('signing.secretKeyRingFile') ? ext."signing.secretKeyRingFile" : System.getenv('signing_secretKeyRingFile')
 
 def getVersionName = { ->
     def stdout = new ByteArrayOutputStream()
