@@ -8,6 +8,5 @@ cache:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
 deploy:
-  echo THIS WORKS!!!
   on:
     tags: true
