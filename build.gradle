@@ -16,7 +16,7 @@ def getVersionName = { ->
         commandLine 'git', 'describe', '--tags'
         standardOutput = stdout
     }
-    return stdout.toString().trim()
+    return stdout.toString().trim().substring(0, stdout.toString().trim().indexOf('-'))
 }
 
 version = getVersionName()
