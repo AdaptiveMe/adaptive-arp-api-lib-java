@@ -6,7 +6,11 @@ def getVersionName = { ->
         commandLine 'git', 'describe', '--tags'
         standardOutput = stdout
     }
-    return stdout.toString().trim().substring(0, stdout.toString().trim().indexOf('-'))
+    if (stdout.toString().trim().indexOf('-') > 0) {
+        return stdout.toString().trim().substring(0, stdout.toString().trim().indexOf('-'))
+    } else {
+        return stdout.toString().trim()
+    }
 }
 ext."signing.keyId" = hasProperty('signing.keyId') ? ext."signing.keyId" : System.getenv('signing_keyId')
 ext."signing.password"  = hasProperty('signing.password') ? ext."signing.password" : System.getenv('signing_password')
