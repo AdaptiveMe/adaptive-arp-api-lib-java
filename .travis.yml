@@ -12,8 +12,4 @@ after_success:
 
     echo "This will deploy!"
 
-  else
-
-    echo "This will not deploy!"
-
   fi
