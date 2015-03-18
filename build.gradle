@@ -10,6 +10,11 @@ targetCompatibility = 1.8
 group = "me.adaptive"
 archivesBaseName = "adaptive-arp-lib"
 
+def ossrhUsername = hasProperty('ossrhUsername') ? ossrhUsername : System.getenv('ossrhUsername')
+def ossrhPassword = hasProperty('ossrhPassword') ? ossrhPassword : System.getenv('ossrhPassword')
+
+println("BREACH--------------> "+ossrhPassword);
+
 def getVersionName = { ->
     def stdout = new ByteArrayOutputStream()
     exec {
