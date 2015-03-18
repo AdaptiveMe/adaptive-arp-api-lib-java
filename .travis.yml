@@ -10,6 +10,8 @@ cache:
 after_success:
   if [ "$TRAVIS_BRANCH" == "$TRAVIS_TAG" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
 
-    echo "This will deploy!"
+    ./gradlew uploadArchives
+
+    ./gradlew nexusStagingRelease
 
   fi
