@@ -1,4 +1,6 @@
 language: java
+before_script:
+  echo $HOME
 jdk:
   - oraclejdk8
 cache:
