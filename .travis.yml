@@ -1,7 +1,7 @@
 sudo: false
 language: java
 before_install:
-  echo $TRAVIS_BRANCH $TRAVIS_TAG $TRAVIS_PULL_REQUEST
+  echo Branch: '$TRAVIS_BRANCH'  Tag: '$TRAVIS_TAG' Pull: '$TRAVIS_PULL_REQUEST'
 jdk:
   - oraclejdk8
 cache:
@@ -9,7 +9,7 @@ cache:
     - $HOME/.gradle/wrapper/dists/gradle-2.3-all/w01pvxy5gty3tegjrai84pm3
     - $HOME/.gradle/caches
 after_success:
-  if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_TAG" != "" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+  if [ "$TRAVIS_BRANCH" == "$TRAVIS_TAG" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
 
     echo "This will deploy!"
 
