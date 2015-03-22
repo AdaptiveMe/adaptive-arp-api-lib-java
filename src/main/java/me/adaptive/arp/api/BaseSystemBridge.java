@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.0
+    * @version 
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -67,7 +67,7 @@ public class BaseSystemBridge implements IBaseSystem {
      */
      @Override
      public String getAPIVersion() {
-          return "v2.2.0";
+          return "";
      }
 
      /**
@@ -93,7 +93,7 @@ public class BaseSystemBridge implements IBaseSystem {
                default:
                     // 404 - response null.
                     responseCode = 404;
-                    responseMessage = "BaseSystemBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.0.";
+                    responseMessage = "BaseSystemBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= .";
           }
           response.setResponse(responseJSON);
           response.setStatusCode(responseCode);
