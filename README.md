@@ -3,7 +3,7 @@
 [![GitHub tag](https://img.shields.io/github/tag/AdaptiveMe/adaptive-arp-api-lib-java.svg)](https://github.com/AdaptiveMe/adaptive-arp-api-lib-java) [![Maven](https://img.shields.io/maven-central/v/me.adaptive/adaptive-arp-lib.svg)](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22adaptive-arp-lib%22) 
 [![License](https://img.shields.io/badge/license-apache%202-blue.svg)](https://raw.githubusercontent.com/AdaptiveMe/adaptive-arp-api/master/LICENSE) 
 [![Adaptive Nibble](https://img.shields.io/badge/libs-java-yellow.svg)](https://github.com/AdaptiveMe/adaptive-arp-api-lib-java)  [![adaptive.me](https://img.shields.io/badge/adaptive-me-fdcb0e.svg)](http://adaptive.me)
-[![Adaptive Development Tools](https://raw.githubusercontent.com/AdaptiveMe/AdaptiveMe.github.io/master/assets/logos/transparent/Logo-adaptive-devtools.png)](#)
+[![Adaptive Development Tools](https://raw.githubusercontent.com/AdaptiveMe/AdaptiveMe.github.io/master/assets/logos/normal/Logo-libraries-for-Javafx.png)](#)
 
 ## Introduction
 
