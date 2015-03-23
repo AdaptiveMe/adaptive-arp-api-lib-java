@@ -37,7 +37,7 @@ package me.adaptive.arp.api;
 import com.google.gson.Gson;
 
 /**
-   Interface for Managing the Network status listener events
+   Interface for Managing the Network status listener networkEvents
    Auto-generated implementation of INetworkStatusListener specification.
 */
 public class NetworkStatusListenerImpl extends BaseListenerImpl implements INetworkStatusListener {
@@ -64,22 +64,22 @@ public class NetworkStatusListenerImpl extends BaseListenerImpl implements INetw
      /**
         Called when network connection changes somehow.
 
-        @param event Change to this network.
+        @param networkEvent Change to this network.
         @since v2.0
      */
-     public void onResult(NetworkEvent event) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleNetworkStatusListenerResult( '"+getId()+"', JSON.parse(" + getJSONParser().toJson(event) +") )");
+     public void onResult(NetworkEvent networkEvent) {
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleNetworkStatusListenerResult( '"+getId()+"', JSON.parse(" + getJSONParser().toJson(networkEvent) +") )");
      }
 
      /**
         Status received with warning
 
-        @param event Change to this network.
+        @param networkEvent Change to this network.
         @param warning Type of warning encountered during reading.
         @since v2.0
      */
-     public void onWarning(NetworkEvent event, INetworkStatusListenerWarning warning) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleNetworkStatusListenerWarning( '"+getId()+"', JSON.parse(" + getJSONParser().toJson(event) +"), JSON.parse(" + getJSONParser().toJson(warning) +") )");
+     public void onWarning(NetworkEvent networkEvent, INetworkStatusListenerWarning warning) {
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleNetworkStatusListenerWarning( '"+getId()+"', JSON.parse(" + getJSONParser().toJson(networkEvent) +"), JSON.parse(" + getJSONParser().toJson(warning) +") )");
      }
 
 }
