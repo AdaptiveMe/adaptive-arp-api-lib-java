@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.0
+    * @version v2.2.1
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -65,7 +65,7 @@ public class BaseSystemDelegate implements IBaseSystem {
      */
      @Override
      public String getAPIVersion() {
-          return "v2.2.0";
+          return "v2.2.1";
      }
 
 }

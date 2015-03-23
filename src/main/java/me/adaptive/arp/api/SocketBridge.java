@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.0
+    * @version v2.2.1
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -87,7 +87,7 @@ public class SocketBridge extends BaseCommunicationBridge implements ISocket, AP
                default:
                     // 404 - response null.
                     responseCode = 404;
-                    responseMessage = "SocketBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.0.";
+                    responseMessage = "SocketBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.1.";
           }
           response.setResponse(responseJSON);
           response.setStatusCode(responseCode);
