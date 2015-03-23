@@ -64,22 +64,22 @@ public class NetworkStatusListenerImpl extends BaseListenerImpl implements INetw
      /**
         Called when network connection changes somehow.
 
-        @param network Change to this network.
+        @param event Change to this network.
         @since v2.0
      */
-     public void onResult(ICapabilitiesNet network) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleNetworkStatusListenerResult( '"+getId()+"', JSON.parse(" + getJSONParser().toJson(network) +") )");
+     public void onResult(NetworkEvent event) {
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleNetworkStatusListenerResult( '"+getId()+"', JSON.parse(" + getJSONParser().toJson(event) +") )");
      }
 
      /**
         Status received with warning
 
-        @param network Change to this network.
+        @param event Change to this network.
         @param warning Type of warning encountered during reading.
         @since v2.0
      */
-     public void onWarning(ICapabilitiesNet network, INetworkStatusListenerWarning warning) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleNetworkStatusListenerWarning( '"+getId()+"', JSON.parse(" + getJSONParser().toJson(network) +"), JSON.parse(" + getJSONParser().toJson(warning) +") )");
+     public void onWarning(NetworkEvent event, INetworkStatusListenerWarning warning) {
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleNetworkStatusListenerWarning( '"+getId()+"', JSON.parse(" + getJSONParser().toJson(event) +"), JSON.parse(" + getJSONParser().toJson(warning) +") )");
      }
 
 }

@@ -58,6 +58,10 @@ Possible lifecycle States:
 6. Stopping    - Before stopping.
      */
      private LifecycleState state;
+     /**
+        The timestamps in milliseconds when the event was fired.
+     */
+     private long timestamp;
 
      /**
         Default constructor
@@ -71,11 +75,13 @@ Possible lifecycle States:
         Constructor used by the implementation
 
         @param state of the app
+        @param timestamp Timestamp of the event
         @since v2.0
      */
-     public Lifecycle(LifecycleState state) {
+     public Lifecycle(LifecycleState state, long timestamp) {
           super();
           this.state = state;
+          this.timestamp = timestamp;
      }
 
      /**
@@ -96,6 +102,26 @@ Possible lifecycle States:
      */
      public void setState(LifecycleState state) {
           this.state = state;
+     }
+
+     /**
+        Gets the timestamp in milliseconds of the event.
+
+        @return Timestamp of the event.
+        @since v2.2.1
+     */
+     public long getTimestamp() {
+          return this.timestamp;
+     }
+
+     /**
+        Sets the timestamp in milliseconds of the event.
+
+        @param timestamp Timestamp of the event.
+        @since v2.2.1
+     */
+     public void setTimestamp(long timestamp) {
+          this.timestamp = timestamp;
      }
 
 

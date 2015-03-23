@@ -53,19 +53,19 @@ public interface INetworkStatusListener extends IBaseListener {
      /**
         Called when network connection changes somehow.
 
-        @param network Change to this network.
+        @param event Change to this network.
         @since v2.0
      */
-     void onResult(ICapabilitiesNet network);
+     void onResult(NetworkEvent event);
 
      /**
         Status received with warning
 
-        @param network Change to this network.
+        @param event Change to this network.
         @param warning Type of warning encountered during reading.
         @since v2.0
      */
-     void onWarning(ICapabilitiesNet network, INetworkStatusListenerWarning warning);
+     void onWarning(NetworkEvent event, INetworkStatusListenerWarning warning);
 
 }
 

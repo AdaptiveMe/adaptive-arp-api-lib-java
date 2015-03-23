@@ -35,68 +35,68 @@ Release:
 package me.adaptive.arp.api;
 
 /**
-   Structure representing the a physical or logical button on a device.
+   Represents a network handover event on the system.
 
-   @author Francisco Javier Martin Bueno
-   @since v2.0
+   @author Ferran Vila Conesa
+   @since v2.2.1
    @version 1.0
 */
-public class Button extends APIBean {
+public class NetworkEvent extends APIBean {
 
      /**
-        Button type
+        New type of network of the event
      */
-     private ICapabilitiesButton type;
+     private ICapabilitiesNet network;
      /**
-        Timestamp of the button event.
+        The timestamps in milliseconds when the event was fired.
      */
      private long timestamp;
 
      /**
         Default constructor
 
-        @since v2.0
+        @since v2.2.1
      */
-     public Button() {
+     public NetworkEvent() {
      }
 
      /**
-        Constructor with fields
+        Constructor used by the implementation
 
-        @param type Button type.
+        @param network   of the app
         @param timestamp Timestamp of the event
-        @since v2.0
+        @since v2.2.1
      */
-     public Button(ICapabilitiesButton type, long timestamp) {
+     public NetworkEvent(ICapabilitiesNet network, long timestamp) {
           super();
-          this.type = type;
+          this.network = network;
           this.timestamp = timestamp;
      }
 
      /**
-        Returns the button type
+        Network event getter
 
-        @return type Button type.
-        @since v2.0
+        @return New network switched
+        @since v2.2.1
      */
-     public ICapabilitiesButton getType() {
-          return this.type;
+     public ICapabilitiesNet getNetwork() {
+          return this.network;
      }
 
      /**
-        Setter for the button type
+        Network setter
 
-        @param type Button Type
-        @since v2.0
+        @param network New network switched
+        @since v2.2.1
      */
-     public void setType(ICapabilitiesButton type) {
-          this.type = type;
+     public void setNetwork(ICapabilitiesNet network) {
+          this.network = network;
      }
 
      /**
-        Timestamp Getter
+        Returns the timestamp of the event
 
-        @return Timestamp
+        @return Timestamp of the event
         @since v2.2.1
      */
      public long getTimestamp() {
@@ -104,9 +104,9 @@ public class Button extends APIBean {
      }
 
      /**
-        Timestamp Setter
+        Sets the timestamp of the event
 
-        @param timestamp Timestamp
+        @param timestamp Timestamp of the event
         @since v2.2.1
      */
      public void setTimestamp(long timestamp) {
