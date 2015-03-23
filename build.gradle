@@ -33,8 +33,8 @@ apply plugin: 'maven'
 apply plugin: 'java'
 apply plugin: 'signing'
 
-sourceCompatibility = 1.6
-targetCompatibility = 1.6
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
 
 group = "me.adaptive"
 archivesBaseName = "adaptive-arp-lib"
