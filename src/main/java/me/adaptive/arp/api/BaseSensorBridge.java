@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.1
+    * @version v2.2.3
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -67,7 +67,7 @@ public class BaseSensorBridge implements IBaseSensor {
      */
      @Override
      public String getAPIVersion() {
-          return "v2.2.1";
+          return "v2.2.3";
      }
 
      /**
@@ -93,7 +93,7 @@ public class BaseSensorBridge implements IBaseSensor {
                default:
                     // 404 - response null.
                     responseCode = 404;
-                    responseMessage = "BaseSensorBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.1.";
+                    responseMessage = "BaseSensorBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.3.";
           }
           response.setResponse(responseJSON);
           response.setStatusCode(responseCode);

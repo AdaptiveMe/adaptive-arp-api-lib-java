@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.1
+    * @version v2.2.3
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -87,7 +87,7 @@ public class OpenIdBridge extends BaseSecurityBridge implements IOpenId, APIBrid
                default:
                     // 404 - response null.
                     responseCode = 404;
-                    responseMessage = "OpenIdBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.1.";
+                    responseMessage = "OpenIdBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.3.";
           }
           response.setResponse(responseJSON);
           response.setStatusCode(responseCode);
