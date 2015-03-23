@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version 
+    * @version v2.2.0
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -331,7 +331,7 @@ This path may or may not be writable by the current application.
                default:
                     // 404 - response null.
                     responseCode = 404;
-                    responseMessage = "FileSystemBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= .";
+                    responseMessage = "FileSystemBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.0.";
           }
           response.setResponse(responseJSON);
           response.setStatusCode(responseCode);

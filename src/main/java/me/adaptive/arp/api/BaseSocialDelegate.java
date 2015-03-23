@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version 
+    * @version v2.2.0
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -65,7 +65,7 @@ public class BaseSocialDelegate implements IBaseSocial {
      */
      @Override
      public String getAPIVersion() {
-          return "";
+          return "v2.2.0";
      }
 
 }
