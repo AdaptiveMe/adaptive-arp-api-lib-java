@@ -1,7 +1,8 @@
 sudo: false
 language: java
 before_install:
-  echo $TRAVIS_BRANCH $TRAVIS_TAG $TRAVIS_PULL_REQUEST
+  - export GIT_TAG=`git describe --abbrev=0`
+  - export TIMESTAMP=`date`
 jdk:
   - oraclejdk8
 cache:
@@ -15,4 +16,34 @@ after_success:
 
     ./gradlew nexusStagingRelease
 
+  elif [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+    
+    export SOURCE_HOME=`pwd`
+    
+    mkdir -p temp
+    
+    cd temp
+    
+    git clone https://github.com/AdaptiveMe/adaptive-arp-api.git
+    
+    cd adaptive-arp-api
+    
+    export API_TAG=`git describe --abbrev=0`
+    
+    export API_TAG=`echo ${API_TAG//[v]/ }`
+    
+    rm -Rf temp
+    
+    cd $SOURCE_HOME
+    
+    git remote set-url origin https://github.com/AdaptiveMe/adaptive-arp-api-lib-java.git
+    
+    if [ "$GIT_TAG" != "$API_TAG" ]; then
+    
+      git tag -a "${API_TAG}" -m "API Specification ${API_TAG}"
+    
+      git push origin HEAD:master --tags
+
+    fi
+    
   fi
