@@ -42,13 +42,6 @@ public enum ISecurityResultCallbackWarning {
      EntryOverride,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(ISecurityResultCallbackWarning.class, new ISecurityResultCallbackWarningAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

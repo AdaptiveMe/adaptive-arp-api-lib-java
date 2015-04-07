@@ -43,13 +43,6 @@ public enum IMessagingCallbackWarning {
      UnableToFetchAttachment,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(IMessagingCallbackWarning.class, new IMessagingCallbackWarningAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

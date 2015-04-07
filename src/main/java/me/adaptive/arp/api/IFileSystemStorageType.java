@@ -47,13 +47,6 @@ public enum IFileSystemStorageType {
      External,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(IFileSystemStorageType.class, new IFileSystemStorageTypeAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

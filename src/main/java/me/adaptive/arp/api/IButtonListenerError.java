@@ -42,13 +42,6 @@ public enum IButtonListenerError {
      NotPresent,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(IButtonListenerError.class, new IButtonListenerErrorAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

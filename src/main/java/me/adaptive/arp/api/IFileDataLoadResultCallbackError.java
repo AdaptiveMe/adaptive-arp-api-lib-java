@@ -44,13 +44,6 @@ public enum IFileDataLoadResultCallbackError {
      Unauthorized,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(IFileDataLoadResultCallbackError.class, new IFileDataLoadResultCallbackErrorAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

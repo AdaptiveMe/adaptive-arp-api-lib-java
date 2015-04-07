@@ -106,8 +106,99 @@ public class AppRegistryBridge implements IAppRegistry {
      public static final GsonBuilder getJSONInstance() {
           if (singletonGsonBuilder == null) {
                singletonGsonBuilder = new GsonBuilder();
+
+               /**
+                  Register custom adapters to serialize/deserialize enums using Gson.
+               */
+               singletonGsonBuilder.registerTypeAdapter(IAdaptiveRPGroup.class, new IAdaptiveRPGroupAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IOSType.class, new IOSTypeAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IContactPhotoResultCallbackWarning.class, new IContactPhotoResultCallbackWarningAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IContactPhotoResultCallbackError.class, new IContactPhotoResultCallbackErrorAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IContactResultCallbackWarning.class, new IContactResultCallbackWarningAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IContactResultCallbackError.class, new IContactResultCallbackErrorAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IDatabaseResultCallbackWarning.class, new IDatabaseResultCallbackWarningAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IDatabaseResultCallbackError.class, new IDatabaseResultCallbackErrorAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IDatabaseTableResultCallbackWarning.class, new IDatabaseTableResultCallbackWarningAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IDatabaseTableResultCallbackError.class, new IDatabaseTableResultCallbackErrorAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IFileDataLoadResultCallbackWarning.class, new IFileDataLoadResultCallbackWarningAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IFileDataLoadResultCallbackError.class, new IFileDataLoadResultCallbackErrorAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IFileDataStoreResultCallbackWarning.class, new IFileDataStoreResultCallbackWarningAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IFileDataStoreResultCallbackError.class, new IFileDataStoreResultCallbackErrorAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IFileListResultCallbackWarning.class, new IFileListResultCallbackWarningAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IFileListResultCallbackError.class, new IFileListResultCallbackErrorAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IFileResultCallbackWarning.class, new IFileResultCallbackWarningAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IFileResultCallbackError.class, new IFileResultCallbackErrorAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IMessagingCallbackWarning.class, new IMessagingCallbackWarningAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IMessagingCallbackError.class, new IMessagingCallbackErrorAdapter());
+               singletonGsonBuilder.registerTypeAdapter(INetworkReachabilityCallbackWarning.class, new INetworkReachabilityCallbackWarningAdapter());
+               singletonGsonBuilder.registerTypeAdapter(INetworkReachabilityCallbackError.class, new INetworkReachabilityCallbackErrorAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ISecurityResultCallbackWarning.class, new ISecurityResultCallbackWarningAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ISecurityResultCallbackError.class, new ISecurityResultCallbackErrorAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IServiceResultCallbackWarning.class, new IServiceResultCallbackWarningAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IServiceResultCallbackError.class, new IServiceResultCallbackErrorAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IServiceMethod.class, new IServiceMethodAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ITelephonyStatus.class, new ITelephonyStatusAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IFileSystemStorageType.class, new IFileSystemStorageTypeAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IFileSystemType.class, new IFileSystemTypeAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IFileSystemSecurity.class, new IFileSystemSecurityAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IAccelerationListenerWarning.class, new IAccelerationListenerWarningAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IAccelerationListenerError.class, new IAccelerationListenerErrorAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IButtonListenerWarning.class, new IButtonListenerWarningAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IButtonListenerError.class, new IButtonListenerErrorAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IDeviceOrientationListenerWarning.class, new IDeviceOrientationListenerWarningAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IDeviceOrientationListenerError.class, new IDeviceOrientationListenerErrorAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IDisplayOrientationListenerWarning.class, new IDisplayOrientationListenerWarningAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IDisplayOrientationListenerError.class, new IDisplayOrientationListenerErrorAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IGeolocationListenerWarning.class, new IGeolocationListenerWarningAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IGeolocationListenerError.class, new IGeolocationListenerErrorAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ILifecycleListenerWarning.class, new ILifecycleListenerWarningAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ILifecycleListenerError.class, new ILifecycleListenerErrorAdapter());
+               singletonGsonBuilder.registerTypeAdapter(INetworkStatusListenerWarning.class, new INetworkStatusListenerWarningAdapter());
+               singletonGsonBuilder.registerTypeAdapter(INetworkStatusListenerError.class, new INetworkStatusListenerErrorAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IContactFilter.class, new IContactFilterAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IContactFieldGroup.class, new IContactFieldGroupAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ICapabilitiesMedia.class, new ICapabilitiesMediaAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ICapabilitiesSensor.class, new ICapabilitiesSensorAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ICapabilitiesData.class, new ICapabilitiesDataAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ICapabilitiesCommunication.class, new ICapabilitiesCommunicationAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ICapabilitiesNet.class, new ICapabilitiesNetAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ICapabilitiesButton.class, new ICapabilitiesButtonAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ICapabilitiesNotification.class, new ICapabilitiesNotificationAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ICapabilitiesOrientation.class, new ICapabilitiesOrientationAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ILoggingLogLevel.class, new ILoggingLogLevelAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IServiceCertificateValidation.class, new IServiceCertificateValidationAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IServiceType.class, new IServiceTypeAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ContactAddressType.class, new ContactAddressTypeAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ContactEmailType.class, new ContactEmailTypeAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ContactPersonalInfoTitle.class, new ContactPersonalInfoTitleAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ContactPhoneType.class, new ContactPhoneTypeAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ContactSocialNetwork.class, new ContactSocialNetworkAdapter());
+               singletonGsonBuilder.registerTypeAdapter(LifecycleState.class, new LifecycleStateAdapter());
+               singletonGsonBuilder.registerTypeAdapter(RotationEventState.class, new RotationEventStateAdapter());
+               singletonGsonBuilder.registerTypeAdapter(IServiceContentEncoding.class, new IServiceContentEncodingAdapter());
           }
           return singletonGsonBuilder;
+     }
+
+     /**
+        Common JSON escape function
+        @param unescapedString The JSON string to be escaped.
+        @return String with the escaped string.
+     */
+     protected static final String escapeString(String unescapedString) {
+          StringBuffer escapedString = new StringBuffer();
+          if (unescapedString != null) {
+               for (char c : unescapedString.toCharArray()) {
+                    if (c == '\\') {
+                         escapedString.append("\\\\");
+                    } else if (c == '\"') {
+                         escapedString.append("\\\""); 
+                    } else {
+                         escapedString.append(c);
+                    }
+               }
+          }
+          return escapedString.toString();
      }
 
      /**

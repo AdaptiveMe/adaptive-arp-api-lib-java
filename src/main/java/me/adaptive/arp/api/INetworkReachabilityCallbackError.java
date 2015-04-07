@@ -52,13 +52,6 @@ public enum INetworkReachabilityCallbackError {
      DomainUnresolvable,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(INetworkReachabilityCallbackError.class, new INetworkReachabilityCallbackErrorAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

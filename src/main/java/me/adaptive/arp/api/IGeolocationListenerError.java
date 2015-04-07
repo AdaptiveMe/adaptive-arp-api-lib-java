@@ -45,13 +45,6 @@ public enum IGeolocationListenerError {
      StatusNotDetermined,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(IGeolocationListenerError.class, new IGeolocationListenerErrorAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

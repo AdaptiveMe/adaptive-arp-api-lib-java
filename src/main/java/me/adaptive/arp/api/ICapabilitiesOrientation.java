@@ -45,13 +45,6 @@ public enum ICapabilitiesOrientation {
      LandscapeRight,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(ICapabilitiesOrientation.class, new ICapabilitiesOrientationAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

@@ -45,13 +45,6 @@ public enum ContactPersonalInfoTitle {
      Dr,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(ContactPersonalInfoTitle.class, new ContactPersonalInfoTitleAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

@@ -46,13 +46,6 @@ public enum IDatabaseTableResultCallbackError {
      NoTableFound,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(IDatabaseTableResultCallbackError.class, new IDatabaseTableResultCallbackErrorAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

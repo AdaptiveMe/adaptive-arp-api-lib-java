@@ -46,13 +46,6 @@ public enum ICapabilitiesMedia {
      VideoRecording,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(ICapabilitiesMedia.class, new ICapabilitiesMediaAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

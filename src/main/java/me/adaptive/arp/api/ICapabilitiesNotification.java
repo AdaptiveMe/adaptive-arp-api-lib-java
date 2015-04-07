@@ -45,13 +45,6 @@ public enum ICapabilitiesNotification {
      Vibration,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(ICapabilitiesNotification.class, new ICapabilitiesNotificationAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

@@ -44,13 +44,6 @@ public enum ICapabilitiesButton {
      OptionButton,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(ICapabilitiesButton.class, new ICapabilitiesButtonAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

@@ -43,13 +43,6 @@ public enum IContactResultCallbackError {
      WrongParams,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(IContactResultCallbackError.class, new IContactResultCallbackErrorAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

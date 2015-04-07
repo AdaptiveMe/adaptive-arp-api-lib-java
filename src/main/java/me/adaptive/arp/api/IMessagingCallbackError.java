@@ -46,13 +46,6 @@ public enum IMessagingCallbackError {
      NotSupported,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(IMessagingCallbackError.class, new IMessagingCallbackErrorAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

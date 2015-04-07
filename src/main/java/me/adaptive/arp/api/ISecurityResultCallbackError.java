@@ -43,13 +43,6 @@ public enum ISecurityResultCallbackError {
      NoMatchesFound,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(ISecurityResultCallbackError.class, new ISecurityResultCallbackErrorAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

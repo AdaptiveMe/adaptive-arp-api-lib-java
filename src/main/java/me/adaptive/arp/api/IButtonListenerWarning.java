@@ -42,13 +42,6 @@ public enum IButtonListenerWarning {
      NotImplemented,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(IButtonListenerWarning.class, new IButtonListenerWarningAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

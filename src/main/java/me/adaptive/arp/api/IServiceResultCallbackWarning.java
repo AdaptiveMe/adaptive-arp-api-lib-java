@@ -52,13 +52,6 @@ public enum IServiceResultCallbackWarning {
      ServerError,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(IServiceResultCallbackWarning.class, new IServiceResultCallbackWarningAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

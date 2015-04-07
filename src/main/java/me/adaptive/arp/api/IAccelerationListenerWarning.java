@@ -43,13 +43,6 @@ public enum IAccelerationListenerWarning {
      Stale,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(IAccelerationListenerWarning.class, new IAccelerationListenerWarningAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

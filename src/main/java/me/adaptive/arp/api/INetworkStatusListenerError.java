@@ -43,13 +43,6 @@ public enum INetworkStatusListenerError {
      Unreachable,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(INetworkStatusListenerError.class, new INetworkStatusListenerErrorAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

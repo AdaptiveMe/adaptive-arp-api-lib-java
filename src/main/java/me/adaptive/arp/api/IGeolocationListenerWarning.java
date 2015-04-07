@@ -43,13 +43,6 @@ public enum IGeolocationListenerWarning {
      StaleData,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(IGeolocationListenerWarning.class, new IGeolocationListenerWarningAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

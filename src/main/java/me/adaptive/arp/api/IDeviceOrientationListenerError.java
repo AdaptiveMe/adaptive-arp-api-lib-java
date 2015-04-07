@@ -41,13 +41,6 @@ public enum IDeviceOrientationListenerError {
 
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(IDeviceOrientationListenerError.class, new IDeviceOrientationListenerErrorAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

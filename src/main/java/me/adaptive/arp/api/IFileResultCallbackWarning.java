@@ -43,13 +43,6 @@ public enum IFileResultCallbackWarning {
      RootDirectory,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(IFileResultCallbackWarning.class, new IFileResultCallbackWarningAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

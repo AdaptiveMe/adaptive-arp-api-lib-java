@@ -43,13 +43,6 @@ public enum IDatabaseResultCallbackWarning {
      IsOpen,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(IDatabaseResultCallbackWarning.class, new IDatabaseResultCallbackWarningAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

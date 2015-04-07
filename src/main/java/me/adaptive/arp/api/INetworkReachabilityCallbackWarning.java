@@ -46,13 +46,6 @@ public enum INetworkReachabilityCallbackWarning {
      NotRegisteredService,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(INetworkReachabilityCallbackWarning.class, new INetworkReachabilityCallbackWarningAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

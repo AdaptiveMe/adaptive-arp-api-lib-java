@@ -45,13 +45,6 @@ public enum IServiceContentEncoding {
      Unicode,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(IServiceContentEncoding.class, new IServiceContentEncodingAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

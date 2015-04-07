@@ -42,13 +42,6 @@ public enum IDisplayOrientationListenerWarning {
      ApplicationVetoed,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(IDisplayOrientationListenerWarning.class, new IDisplayOrientationListenerWarningAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

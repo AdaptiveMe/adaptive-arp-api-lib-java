@@ -43,13 +43,6 @@ public enum IAccelerationListenerError {
      Unavailable,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(IAccelerationListenerError.class, new IAccelerationListenerErrorAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

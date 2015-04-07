@@ -43,13 +43,6 @@ public enum INetworkStatusListenerWarning {
      IpAddressChanged,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(INetworkStatusListenerWarning.class, new INetworkStatusListenerWarningAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

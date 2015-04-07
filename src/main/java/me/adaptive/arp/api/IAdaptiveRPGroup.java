@@ -56,13 +56,6 @@ public enum IAdaptiveRPGroup {
      Kernel,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(IAdaptiveRPGroup.class, new IAdaptiveRPGroupAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

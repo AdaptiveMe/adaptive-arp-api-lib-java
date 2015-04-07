@@ -45,13 +45,6 @@ public enum IServiceCertificateValidation {
      Extreme,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(IServiceCertificateValidation.class, new IServiceCertificateValidationAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

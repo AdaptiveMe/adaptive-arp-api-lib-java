@@ -44,13 +44,6 @@ public enum IDatabaseResultCallbackError {
      NotDeleted,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(IDatabaseResultCallbackError.class, new IDatabaseResultCallbackErrorAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

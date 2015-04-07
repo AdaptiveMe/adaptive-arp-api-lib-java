@@ -44,13 +44,6 @@ public enum IContactPhotoResultCallbackError {
      NoPhoto,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(IContactPhotoResultCallbackError.class, new IContactPhotoResultCallbackErrorAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

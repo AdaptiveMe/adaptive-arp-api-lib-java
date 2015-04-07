@@ -43,13 +43,6 @@ public enum ILifecycleListenerWarning {
      BatteryLow,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(ILifecycleListenerWarning.class, new ILifecycleListenerWarningAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------

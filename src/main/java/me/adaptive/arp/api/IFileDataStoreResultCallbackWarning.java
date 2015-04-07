@@ -42,13 +42,6 @@ public enum IFileDataStoreResultCallbackWarning {
      ExceedMaximumSize,
      Unknown;
 
-     /**
-        Register deserializer/serializer in common JSON Builder.
-     */
-     static {
-          AppRegistryBridge.getJSONInstance().registerTypeAdapter(IFileDataStoreResultCallbackWarning.class, new IFileDataStoreResultCallbackWarningAdapter());
-     }
-
 }
 /**
 ------------------------------------| Engineered with ♥ in Barcelona, Catalonia |--------------------------------------
