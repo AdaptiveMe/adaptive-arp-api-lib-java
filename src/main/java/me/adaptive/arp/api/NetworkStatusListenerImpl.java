@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.4
+    * @version v2.2.5
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -58,7 +58,7 @@ public class NetworkStatusListenerImpl extends BaseListenerImpl implements INetw
         @since v2.0
      */
      public void onError(INetworkStatusListenerError error) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleNetworkStatusListenerError( '"+getId()+"', JSON.parse(" + getJSONParser().toJson(error) +") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleNetworkStatusListenerError( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\") )");
      }
 
      /**
@@ -68,7 +68,7 @@ public class NetworkStatusListenerImpl extends BaseListenerImpl implements INetw
         @since v2.0
      */
      public void onResult(NetworkEvent networkEvent) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleNetworkStatusListenerResult( '"+getId()+"', JSON.parse(" + getJSONParser().toJson(networkEvent) +") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleNetworkStatusListenerResult( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(networkEvent)) + "\") )");
      }
 
      /**
@@ -79,7 +79,7 @@ public class NetworkStatusListenerImpl extends BaseListenerImpl implements INetw
         @since v2.0
      */
      public void onWarning(NetworkEvent networkEvent, INetworkStatusListenerWarning warning) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleNetworkStatusListenerWarning( '"+getId()+"', JSON.parse(" + getJSONParser().toJson(networkEvent) +"), JSON.parse(" + getJSONParser().toJson(warning) +") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleNetworkStatusListenerWarning( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(networkEvent)) + "\"), JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\") )");
      }
 
 }

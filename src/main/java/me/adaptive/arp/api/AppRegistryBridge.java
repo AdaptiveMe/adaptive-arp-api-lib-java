@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.4
+    * @version v2.2.5
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -157,14 +157,14 @@ public class AppRegistryBridge implements IAppRegistry {
                singletonGsonBuilder.registerTypeAdapter(INetworkStatusListenerError.class, new INetworkStatusListenerErrorAdapter());
                singletonGsonBuilder.registerTypeAdapter(IContactFilter.class, new IContactFilterAdapter());
                singletonGsonBuilder.registerTypeAdapter(IContactFieldGroup.class, new IContactFieldGroupAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ICapabilitiesSensor.class, new ICapabilitiesSensorAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ICapabilitiesCommunication.class, new ICapabilitiesCommunicationAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ICapabilitiesData.class, new ICapabilitiesDataAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ICapabilitiesMedia.class, new ICapabilitiesMediaAdapter());
                singletonGsonBuilder.registerTypeAdapter(ICapabilitiesNet.class, new ICapabilitiesNetAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ICapabilitiesNotification.class, new ICapabilitiesNotificationAdapter());
                singletonGsonBuilder.registerTypeAdapter(ICapabilitiesButton.class, new ICapabilitiesButtonAdapter());
                singletonGsonBuilder.registerTypeAdapter(ICapabilitiesOrientation.class, new ICapabilitiesOrientationAdapter());
-               singletonGsonBuilder.registerTypeAdapter(ICapabilitiesCommunication.class, new ICapabilitiesCommunicationAdapter());
-               singletonGsonBuilder.registerTypeAdapter(ICapabilitiesNotification.class, new ICapabilitiesNotificationAdapter());
-               singletonGsonBuilder.registerTypeAdapter(ICapabilitiesMedia.class, new ICapabilitiesMediaAdapter());
-               singletonGsonBuilder.registerTypeAdapter(ICapabilitiesData.class, new ICapabilitiesDataAdapter());
-               singletonGsonBuilder.registerTypeAdapter(ICapabilitiesSensor.class, new ICapabilitiesSensorAdapter());
                singletonGsonBuilder.registerTypeAdapter(ILoggingLogLevel.class, new ILoggingLogLevelAdapter());
                singletonGsonBuilder.registerTypeAdapter(IServiceCertificateValidation.class, new IServiceCertificateValidationAdapter());
                singletonGsonBuilder.registerTypeAdapter(IServiceType.class, new IServiceTypeAdapter());

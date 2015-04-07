@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.4
+    * @version v2.2.5
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -58,7 +58,7 @@ public class GeolocationListenerImpl extends BaseListenerImpl implements IGeoloc
         @since v2.0
      */
      public void onError(IGeolocationListenerError error) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleGeolocationListenerError( '"+getId()+"', JSON.parse(" + getJSONParser().toJson(error) +") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleGeolocationListenerError( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\") )");
      }
 
      /**
@@ -68,7 +68,7 @@ public class GeolocationListenerImpl extends BaseListenerImpl implements IGeoloc
         @since v2.0
      */
      public void onResult(Geolocation geolocation) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleGeolocationListenerResult( '"+getId()+"', JSON.parse(" + getJSONParser().toJson(geolocation) +") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleGeolocationListenerResult( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(geolocation)) + "\") )");
      }
 
      /**
@@ -79,7 +79,7 @@ public class GeolocationListenerImpl extends BaseListenerImpl implements IGeoloc
         @since v2.0
      */
      public void onWarning(Geolocation geolocation, IGeolocationListenerWarning warning) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleGeolocationListenerWarning( '"+getId()+"', JSON.parse(" + getJSONParser().toJson(geolocation) +"), JSON.parse(" + getJSONParser().toJson(warning) +") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleGeolocationListenerWarning( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(geolocation)) + "\"), JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\") )");
      }
 
 }
