@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.5
+    * @version v2.2.6
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -87,7 +87,7 @@ public class CloudBridge extends BaseDataBridge implements ICloud, APIBridge {
                default:
                     // 404 - response null.
                     responseCode = 404;
-                    responseMessage = "CloudBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.5.";
+                    responseMessage = "CloudBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.6.";
           }
           response.setResponse(responseJSON);
           response.setStatusCode(responseCode);
