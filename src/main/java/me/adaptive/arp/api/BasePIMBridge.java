@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.3
+    * @version v2.2.4
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -67,7 +67,7 @@ public class BasePIMBridge implements IBasePIM {
      */
      @Override
      public String getAPIVersion() {
-          return "v2.2.3";
+          return "v2.2.4";
      }
 
      /**
@@ -93,7 +93,7 @@ public class BasePIMBridge implements IBasePIM {
                default:
                     // 404 - response null.
                     responseCode = 404;
-                    responseMessage = "BasePIMBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.3.";
+                    responseMessage = "BasePIMBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.4.";
           }
           response.setResponse(responseJSON);
           response.setStatusCode(responseCode);

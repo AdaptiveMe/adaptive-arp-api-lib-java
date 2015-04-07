@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.3
+    * @version v2.2.4
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -83,7 +83,7 @@ public class BaseCallbackImpl implements IBaseCallback {
      */
      @Override
      public String getAPIVersion() {
-          return "v2.2.3";
+          return "v2.2.4";
      }
 
      /**

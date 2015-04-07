@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.3
+    * @version v2.2.4
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -87,7 +87,7 @@ public class ImagingBridge extends BaseMediaBridge implements IImaging, APIBridg
                default:
                     // 404 - response null.
                     responseCode = 404;
-                    responseMessage = "ImagingBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.3.";
+                    responseMessage = "ImagingBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.4.";
           }
           response.setResponse(responseJSON);
           response.setStatusCode(responseCode);
