@@ -58,7 +58,7 @@ public class ContactResultCallbackImpl extends BaseCallbackImpl implements ICont
         @since v2.0
      */
      public void onError(IContactResultCallbackError error) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleContactResultCallbackError( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleContactResultCallbackError( '"+getId()+"', Adaptive.IContactResultCallbackError.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\")) )");
      }
 
      /**
@@ -68,7 +68,7 @@ public class ContactResultCallbackImpl extends BaseCallbackImpl implements ICont
         @since v2.0
      */
      public void onResult(Contact[] contacts) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleContactResultCallbackResult( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(contacts)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleContactResultCallbackResult( '"+getId()+"', Adaptive.Contact.toObjectArray(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(contacts)) + "\")) )");
      }
 
      /**
@@ -79,7 +79,7 @@ public class ContactResultCallbackImpl extends BaseCallbackImpl implements ICont
         @since v2.0
      */
      public void onWarning(Contact[] contacts, IContactResultCallbackWarning warning) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleContactResultCallbackWarning( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(contacts)) + "\"), JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleContactResultCallbackWarning( '"+getId()+"', Adaptive.Contact.toObjectArray(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(contacts)) + "\")), Adaptive.IContactResultCallbackWarning.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\")) )");
      }
 
 }

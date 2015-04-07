@@ -58,7 +58,7 @@ public class NetworkReachabilityCallbackImpl extends BaseCallbackImpl implements
         @since v2.0
      */
      public void onError(INetworkReachabilityCallbackError error) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleNetworkReachabilityCallbackError( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleNetworkReachabilityCallbackError( '"+getId()+"', Adaptive.INetworkReachabilityCallbackError.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\")) )");
      }
 
      /**
@@ -68,7 +68,7 @@ public class NetworkReachabilityCallbackImpl extends BaseCallbackImpl implements
         @since v2.0
      */
      public void onResult(boolean reachable) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleNetworkReachabilityCallbackResult( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(reachable)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleNetworkReachabilityCallbackResult( '"+getId()+"', JSON.parse(\"" + reachable + "\") )");
      }
 
      /**
@@ -79,7 +79,7 @@ public class NetworkReachabilityCallbackImpl extends BaseCallbackImpl implements
         @since v2.0
      */
      public void onWarning(boolean reachable, INetworkReachabilityCallbackWarning warning) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleNetworkReachabilityCallbackWarning( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(reachable)) + "\"), JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleNetworkReachabilityCallbackWarning( '"+getId()+"', JSON.parse(\"" + reachable + "\"), Adaptive.INetworkReachabilityCallbackWarning.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\")) )");
      }
 
 }

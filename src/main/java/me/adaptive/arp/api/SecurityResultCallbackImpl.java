@@ -58,7 +58,7 @@ public class SecurityResultCallbackImpl extends BaseCallbackImpl implements ISec
         @since v2.0
      */
      public void onError(ISecurityResultCallbackError error) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleSecurityResultCallbackError( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleSecurityResultCallbackError( '"+getId()+"', Adaptive.ISecurityResultCallbackError.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\")) )");
      }
 
      /**
@@ -68,7 +68,7 @@ public class SecurityResultCallbackImpl extends BaseCallbackImpl implements ISec
         @since v2.0
      */
      public void onResult(SecureKeyPair[] keyValues) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleSecurityResultCallbackResult( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(keyValues)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleSecurityResultCallbackResult( '"+getId()+"', Adaptive.SecureKeyPair.toObjectArray(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(keyValues)) + "\")) )");
      }
 
      /**
@@ -79,7 +79,7 @@ public class SecurityResultCallbackImpl extends BaseCallbackImpl implements ISec
         @since v2.0
      */
      public void onWarning(SecureKeyPair[] keyValues, ISecurityResultCallbackWarning warning) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleSecurityResultCallbackWarning( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(keyValues)) + "\"), JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleSecurityResultCallbackWarning( '"+getId()+"', Adaptive.SecureKeyPair.toObjectArray(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(keyValues)) + "\")), Adaptive.ISecurityResultCallbackWarning.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\")) )");
      }
 
 }

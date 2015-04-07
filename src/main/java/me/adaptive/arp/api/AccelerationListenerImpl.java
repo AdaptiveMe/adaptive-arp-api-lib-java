@@ -59,7 +59,7 @@ listener and subsequently, the listener will be deactivated and removed from the
         @since v2.0
      */
      public void onError(IAccelerationListenerError error) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleAccelerationListenerError( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleAccelerationListenerError( '"+getId()+"', Adaptive.IAccelerationListenerError.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\")) )");
      }
 
      /**
@@ -69,7 +69,7 @@ listener and subsequently, the listener will be deactivated and removed from the
         @since v2.0
      */
      public void onResult(Acceleration acceleration) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleAccelerationListenerResult( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(acceleration)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleAccelerationListenerResult( '"+getId()+"', Adaptive.Acceleration.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(acceleration)) + "\")) )");
      }
 
      /**
@@ -80,7 +80,7 @@ listener and subsequently, the listener will be deactivated and removed from the
         @since v2.0
      */
      public void onWarning(Acceleration acceleration, IAccelerationListenerWarning warning) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleAccelerationListenerWarning( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(acceleration)) + "\"), JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleAccelerationListenerWarning( '"+getId()+"', Adaptive.Acceleration.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(acceleration)) + "\")), Adaptive.IAccelerationListenerWarning.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\")) )");
      }
 
 }

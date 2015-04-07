@@ -58,7 +58,7 @@ public class FileListResultCallbackImpl extends BaseCallbackImpl implements IFil
         @since v2.0
      */
      public void onError(IFileListResultCallbackError error) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleFileListResultCallbackError( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleFileListResultCallbackError( '"+getId()+"', Adaptive.IFileListResultCallbackError.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\")) )");
      }
 
      /**
@@ -68,7 +68,7 @@ public class FileListResultCallbackImpl extends BaseCallbackImpl implements IFil
         @since v2.0
      */
      public void onResult(FileDescriptor[] files) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleFileListResultCallbackResult( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(files)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleFileListResultCallbackResult( '"+getId()+"', Adaptive.FileDescriptor.toObjectArray(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(files)) + "\")) )");
      }
 
      /**
@@ -79,7 +79,7 @@ public class FileListResultCallbackImpl extends BaseCallbackImpl implements IFil
         @since v2.0
      */
      public void onWarning(FileDescriptor[] files, IFileListResultCallbackWarning warning) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleFileListResultCallbackWarning( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(files)) + "\"), JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleFileListResultCallbackWarning( '"+getId()+"', Adaptive.FileDescriptor.toObjectArray(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(files)) + "\")), Adaptive.IFileListResultCallbackWarning.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\")) )");
      }
 
 }

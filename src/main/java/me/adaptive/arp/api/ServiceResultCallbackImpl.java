@@ -58,7 +58,7 @@ public class ServiceResultCallbackImpl extends BaseCallbackImpl implements IServ
         @since v2.0
      */
      public void onError(IServiceResultCallbackError error) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleServiceResultCallbackError( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleServiceResultCallbackError( '"+getId()+"', Adaptive.IServiceResultCallbackError.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\")) )");
      }
 
      /**
@@ -68,7 +68,7 @@ public class ServiceResultCallbackImpl extends BaseCallbackImpl implements IServ
         @since v2.0
      */
      public void onResult(ServiceResponse response) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleServiceResultCallbackResult( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(response)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleServiceResultCallbackResult( '"+getId()+"', Adaptive.ServiceResponse.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(response)) + "\")) )");
      }
 
      /**
@@ -79,7 +79,7 @@ public class ServiceResultCallbackImpl extends BaseCallbackImpl implements IServ
         @since v2.0
      */
      public void onWarning(ServiceResponse response, IServiceResultCallbackWarning warning) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleServiceResultCallbackWarning( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(response)) + "\"), JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleServiceResultCallbackWarning( '"+getId()+"', Adaptive.ServiceResponse.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(response)) + "\")), Adaptive.IServiceResultCallbackWarning.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\")) )");
      }
 
 }

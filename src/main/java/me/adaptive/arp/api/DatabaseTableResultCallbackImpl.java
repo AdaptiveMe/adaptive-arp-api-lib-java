@@ -58,7 +58,7 @@ public class DatabaseTableResultCallbackImpl extends BaseCallbackImpl implements
         @since v2.0
      */
      public void onError(IDatabaseTableResultCallbackError error) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleDatabaseTableResultCallbackError( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleDatabaseTableResultCallbackError( '"+getId()+"', Adaptive.IDatabaseTableResultCallbackError.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\")) )");
      }
 
      /**
@@ -68,7 +68,7 @@ public class DatabaseTableResultCallbackImpl extends BaseCallbackImpl implements
         @since v2.0
      */
      public void onResult(DatabaseTable databaseTable) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleDatabaseTableResultCallbackResult( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(databaseTable)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleDatabaseTableResultCallbackResult( '"+getId()+"', Adaptive.DatabaseTable.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(databaseTable)) + "\")) )");
      }
 
      /**
@@ -79,7 +79,7 @@ public class DatabaseTableResultCallbackImpl extends BaseCallbackImpl implements
         @since v2.0
      */
      public void onWarning(DatabaseTable databaseTable, IDatabaseTableResultCallbackWarning warning) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleDatabaseTableResultCallbackWarning( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(databaseTable)) + "\"), JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleDatabaseTableResultCallbackWarning( '"+getId()+"', Adaptive.DatabaseTable.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(databaseTable)) + "\")), Adaptive.IDatabaseTableResultCallbackWarning.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\")) )");
      }
 
 }

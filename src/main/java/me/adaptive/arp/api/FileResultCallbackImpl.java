@@ -58,7 +58,7 @@ public class FileResultCallbackImpl extends BaseCallbackImpl implements IFileRes
         @since v2.0
      */
      public void onError(IFileResultCallbackError error) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleFileResultCallbackError( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleFileResultCallbackError( '"+getId()+"', Adaptive.IFileResultCallbackError.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\")) )");
      }
 
      /**
@@ -68,7 +68,7 @@ public class FileResultCallbackImpl extends BaseCallbackImpl implements IFileRes
         @since v2.0
      */
      public void onResult(FileDescriptor storageFile) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleFileResultCallbackResult( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(storageFile)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleFileResultCallbackResult( '"+getId()+"', Adaptive.FileDescriptor.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(storageFile)) + "\")) )");
      }
 
      /**
@@ -79,7 +79,7 @@ public class FileResultCallbackImpl extends BaseCallbackImpl implements IFileRes
         @since v2.0
      */
      public void onWarning(FileDescriptor file, IFileResultCallbackWarning warning) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleFileResultCallbackWarning( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(file)) + "\"), JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleFileResultCallbackWarning( '"+getId()+"', Adaptive.FileDescriptor.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(file)) + "\")), Adaptive.IFileResultCallbackWarning.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\")) )");
      }
 
 }

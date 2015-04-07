@@ -58,7 +58,7 @@ public class ButtonListenerImpl extends BaseListenerImpl implements IButtonListe
         @since v2.0
      */
      public void onError(IButtonListenerError error) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleButtonListenerError( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleButtonListenerError( '"+getId()+"', Adaptive.IButtonListenerError.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\")) )");
      }
 
      /**
@@ -68,7 +68,7 @@ public class ButtonListenerImpl extends BaseListenerImpl implements IButtonListe
         @since v2.0
      */
      public void onResult(Button button) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleButtonListenerResult( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(button)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleButtonListenerResult( '"+getId()+"', Adaptive.Button.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(button)) + "\")) )");
      }
 
      /**
@@ -79,7 +79,7 @@ public class ButtonListenerImpl extends BaseListenerImpl implements IButtonListe
         @since v2.0
      */
      public void onWarning(Button button, IButtonListenerWarning warning) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleButtonListenerWarning( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(button)) + "\"), JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleButtonListenerWarning( '"+getId()+"', Adaptive.Button.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(button)) + "\")), Adaptive.IButtonListenerWarning.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\")) )");
      }
 
 }

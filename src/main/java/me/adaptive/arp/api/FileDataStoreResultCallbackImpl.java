@@ -58,7 +58,7 @@ public class FileDataStoreResultCallbackImpl extends BaseCallbackImpl implements
         @since v2.0
      */
      public void onError(IFileDataStoreResultCallbackError error) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleFileDataStoreResultCallbackError( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleFileDataStoreResultCallbackError( '"+getId()+"', Adaptive.IFileDataStoreResultCallbackError.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\")) )");
      }
 
      /**
@@ -68,7 +68,7 @@ public class FileDataStoreResultCallbackImpl extends BaseCallbackImpl implements
         @since v2.0
      */
      public void onResult(FileDescriptor file) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleFileDataStoreResultCallbackResult( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(file)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleFileDataStoreResultCallbackResult( '"+getId()+"', Adaptive.FileDescriptor.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(file)) + "\")) )");
      }
 
      /**
@@ -79,7 +79,7 @@ public class FileDataStoreResultCallbackImpl extends BaseCallbackImpl implements
         @since v2.0
      */
      public void onWarning(FileDescriptor file, IFileDataStoreResultCallbackWarning warning) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleFileDataStoreResultCallbackWarning( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(file)) + "\"), JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleFileDataStoreResultCallbackWarning( '"+getId()+"', Adaptive.FileDescriptor.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(file)) + "\")), Adaptive.IFileDataStoreResultCallbackWarning.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\")) )");
      }
 
 }

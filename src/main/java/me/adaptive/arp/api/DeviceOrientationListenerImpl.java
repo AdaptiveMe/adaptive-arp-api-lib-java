@@ -59,7 +59,7 @@ platform impedes the rotation of the device.
         @since v2.0.5
      */
      public void onError(IDeviceOrientationListenerError error) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleDeviceOrientationListenerError( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleDeviceOrientationListenerError( '"+getId()+"', Adaptive.IDeviceOrientationListenerError.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\")) )");
      }
 
      /**
@@ -69,7 +69,7 @@ platform impedes the rotation of the device.
         @since v2.0.5
      */
      public void onResult(RotationEvent rotationEvent) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleDeviceOrientationListenerResult( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(rotationEvent)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleDeviceOrientationListenerResult( '"+getId()+"', Adaptive.RotationEvent.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(rotationEvent)) + "\")) )");
      }
 
      /**
@@ -81,7 +81,7 @@ event may be fired if the devices vetoes the rotation before rotation is complet
         @since v2.0.5
      */
      public void onWarning(RotationEvent rotationEvent, IDeviceOrientationListenerWarning warning) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleDeviceOrientationListenerWarning( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(rotationEvent)) + "\"), JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleDeviceOrientationListenerWarning( '"+getId()+"', Adaptive.RotationEvent.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(rotationEvent)) + "\")), Adaptive.IDeviceOrientationListenerWarning.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\")) )");
      }
 
 }

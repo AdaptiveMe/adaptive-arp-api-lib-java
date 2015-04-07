@@ -59,7 +59,7 @@ platform impedes the rotation of the display.
         @since v2.0.5
      */
      public void onError(IDisplayOrientationListenerError error) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleDisplayOrientationListenerError( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleDisplayOrientationListenerError( '"+getId()+"', Adaptive.IDisplayOrientationListenerError.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\")) )");
      }
 
      /**
@@ -69,7 +69,7 @@ platform impedes the rotation of the display.
         @since v2.0.5
      */
      public void onResult(RotationEvent rotationEvent) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleDisplayOrientationListenerResult( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(rotationEvent)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleDisplayOrientationListenerResult( '"+getId()+"', Adaptive.RotationEvent.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(rotationEvent)) + "\")) )");
      }
 
      /**
@@ -81,7 +81,7 @@ event may be fired if the application vetoes display rotation before rotation is
         @since v2.0.5
      */
      public void onWarning(RotationEvent rotationEvent, IDisplayOrientationListenerWarning warning) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleDisplayOrientationListenerWarning( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(rotationEvent)) + "\"), JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleDisplayOrientationListenerWarning( '"+getId()+"', Adaptive.RotationEvent.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(rotationEvent)) + "\")), Adaptive.IDisplayOrientationListenerWarning.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\")) )");
      }
 
 }

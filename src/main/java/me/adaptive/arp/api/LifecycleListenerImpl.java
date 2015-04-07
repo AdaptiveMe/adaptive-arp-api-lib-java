@@ -58,7 +58,7 @@ public class LifecycleListenerImpl extends BaseListenerImpl implements ILifecycl
         @since v2.0
      */
      public void onError(ILifecycleListenerError error) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleLifecycleListenerError( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleLifecycleListenerError( '"+getId()+"', Adaptive.ILifecycleListenerError.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\")) )");
      }
 
      /**
@@ -68,7 +68,7 @@ public class LifecycleListenerImpl extends BaseListenerImpl implements ILifecycl
         @since v2.0
      */
      public void onResult(Lifecycle lifecycle) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleLifecycleListenerResult( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(lifecycle)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleLifecycleListenerResult( '"+getId()+"', Adaptive.Lifecycle.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(lifecycle)) + "\")) )");
      }
 
      /**
@@ -79,7 +79,7 @@ public class LifecycleListenerImpl extends BaseListenerImpl implements ILifecycl
         @since v2.0
      */
      public void onWarning(Lifecycle lifecycle, ILifecycleListenerWarning warning) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleLifecycleListenerWarning( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(lifecycle)) + "\"), JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleLifecycleListenerWarning( '"+getId()+"', Adaptive.Lifecycle.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(lifecycle)) + "\")), Adaptive.ILifecycleListenerWarning.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\")) )");
      }
 
 }

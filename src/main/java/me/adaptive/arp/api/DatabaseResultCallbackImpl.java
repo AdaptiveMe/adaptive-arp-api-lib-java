@@ -58,7 +58,7 @@ public class DatabaseResultCallbackImpl extends BaseCallbackImpl implements IDat
         @since v2.0
      */
      public void onError(IDatabaseResultCallbackError error) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleDatabaseResultCallbackError( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleDatabaseResultCallbackError( '"+getId()+"', Adaptive.IDatabaseResultCallbackError.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\")) )");
      }
 
      /**
@@ -68,7 +68,7 @@ public class DatabaseResultCallbackImpl extends BaseCallbackImpl implements IDat
         @since v2.0
      */
      public void onResult(Database database) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleDatabaseResultCallbackResult( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(database)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleDatabaseResultCallbackResult( '"+getId()+"', Adaptive.Database.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(database)) + "\")) )");
      }
 
      /**
@@ -79,7 +79,7 @@ public class DatabaseResultCallbackImpl extends BaseCallbackImpl implements IDat
         @since v2.0
      */
      public void onWarning(Database database, IDatabaseResultCallbackWarning warning) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleDatabaseResultCallbackWarning( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(database)) + "\"), JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleDatabaseResultCallbackWarning( '"+getId()+"', Adaptive.Database.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(database)) + "\")), Adaptive.IDatabaseResultCallbackWarning.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\")) )");
      }
 
 }

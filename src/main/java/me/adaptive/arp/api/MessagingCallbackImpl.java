@@ -58,7 +58,7 @@ public class MessagingCallbackImpl extends BaseCallbackImpl implements IMessagin
         @since v2.0
      */
      public void onError(IMessagingCallbackError error) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleMessagingCallbackError( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleMessagingCallbackError( '"+getId()+"', Adaptive.IMessagingCallbackError.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(error)) + "\")) )");
      }
 
      /**
@@ -68,7 +68,7 @@ public class MessagingCallbackImpl extends BaseCallbackImpl implements IMessagin
         @since v2.0
      */
      public void onResult(boolean success) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleMessagingCallbackResult( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(success)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleMessagingCallbackResult( '"+getId()+"', JSON.parse(\"" + success + "\") )");
      }
 
      /**
@@ -79,7 +79,7 @@ public class MessagingCallbackImpl extends BaseCallbackImpl implements IMessagin
         @since v2.0
      */
      public void onWarning(boolean success, IMessagingCallbackWarning warning) {
-          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleMessagingCallbackWarning( '"+getId()+"', JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(success)) + "\"), JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\") )");
+          AppRegistryBridge.getInstance().getPlatformContextWeb().executeJavaScript("Adaptive.handleMessagingCallbackWarning( '"+getId()+"', JSON.parse(\"" + success + "\"), Adaptive.IMessagingCallbackWarning.toObject(JSON.parse(\"" + AppRegistryBridge.escapeString(getJSONParser().toJson(warning)) + "\")) )");
      }
 
 }
