@@ -287,13 +287,13 @@ public class ContactBridge extends BasePIMBridge implements IContact, APIBridge 
                     break;
                case "getContactsForFields":
                     IContactResultCallback callback3 = new ContactResultCallbackImpl(request.getAsyncId());
-                    IContactFieldGroup[] fields3 = getJSONParser().fromJson(request.getParameters()[1], IContactFieldGroup[].class);
+                    IContactFieldGroup[] fields3 = getJSONParser().fromJson(request.getParameters()[0], IContactFieldGroup[].class);
                     this.getContactsForFields(callback3, fields3);
                     break;
                case "getContactsWithFilter":
                     IContactResultCallback callback4 = new ContactResultCallbackImpl(request.getAsyncId());
-                    IContactFieldGroup[] fields4 = getJSONParser().fromJson(request.getParameters()[1], IContactFieldGroup[].class);
-                    IContactFilter[] filter4 = getJSONParser().fromJson(request.getParameters()[2], IContactFilter[].class);
+                    IContactFieldGroup[] fields4 = getJSONParser().fromJson(request.getParameters()[0], IContactFieldGroup[].class);
+                    IContactFilter[] filter4 = getJSONParser().fromJson(request.getParameters()[1], IContactFilter[].class);
                     this.getContactsWithFilter(callback4, fields4, filter4);
                     break;
                case "searchContacts":
@@ -304,7 +304,7 @@ public class ContactBridge extends BasePIMBridge implements IContact, APIBridge 
                case "searchContactsWithFilter":
                     String term6 = getJSONParser().fromJson(request.getParameters()[0], String.class);
                     IContactResultCallback callback6 = new ContactResultCallbackImpl(request.getAsyncId());
-                    IContactFilter[] filter6 = getJSONParser().fromJson(request.getParameters()[2], IContactFilter[].class);
+                    IContactFilter[] filter6 = getJSONParser().fromJson(request.getParameters()[1], IContactFilter[].class);
                     this.searchContactsWithFilter(term6, callback6, filter6);
                     break;
                case "setContactPhoto":
