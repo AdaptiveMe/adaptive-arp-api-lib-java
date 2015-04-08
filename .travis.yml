@@ -15,10 +15,6 @@ before_script:
 - echo "https://${GH_TOKEN}:@github.com" > $HOME/.git/credentials
 jdk:
 - oraclejdk8
-cache:
-  directories:
-  - $HOME/.gradle/wrapper/
-  - $HOME/.gradle/caches/
 after_success: |-
   if [ "$TRAVIS_BRANCH" == "$TRAVIS_TAG" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
   ./gradlew uploadArchives
