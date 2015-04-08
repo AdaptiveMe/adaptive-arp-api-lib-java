@@ -158,8 +158,8 @@ public class AppRegistryBridge implements IAppRegistry {
                singletonGsonBuilder.registerTypeAdapter(IContactFilter.class, new IContactFilterAdapter());
                singletonGsonBuilder.registerTypeAdapter(IContactFieldGroup.class, new IContactFieldGroupAdapter());
                singletonGsonBuilder.registerTypeAdapter(ICapabilitiesSensor.class, new ICapabilitiesSensorAdapter());
-               singletonGsonBuilder.registerTypeAdapter(ICapabilitiesCommunication.class, new ICapabilitiesCommunicationAdapter());
                singletonGsonBuilder.registerTypeAdapter(ICapabilitiesData.class, new ICapabilitiesDataAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ICapabilitiesCommunication.class, new ICapabilitiesCommunicationAdapter());
                singletonGsonBuilder.registerTypeAdapter(ICapabilitiesMedia.class, new ICapabilitiesMediaAdapter());
                singletonGsonBuilder.registerTypeAdapter(ICapabilitiesNet.class, new ICapabilitiesNetAdapter());
                singletonGsonBuilder.registerTypeAdapter(ICapabilitiesNotification.class, new ICapabilitiesNotificationAdapter());
