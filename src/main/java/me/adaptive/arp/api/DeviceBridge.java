@@ -295,19 +295,19 @@ of the display. For display orientation, use the IDisplay APIs.
                case "getDeviceInfo":
                     DeviceInfo response2 = this.getDeviceInfo();
                     if (response2 != null) {
-                         responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response2));
+                         responseJSON = getJSONParser().toJson(response2);
                     }
                     break;
                case "getLocaleCurrent":
                     Locale response3 = this.getLocaleCurrent();
                     if (response3 != null) {
-                         responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response3));
+                         responseJSON = getJSONParser().toJson(response3);
                     }
                     break;
                case "getOrientationCurrent":
                     ICapabilitiesOrientation response4 = this.getOrientationCurrent();
                     if (response4 != null) {
-                         responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response4));
+                         responseJSON = getJSONParser().toJson(response4);
                     }
                     break;
                case "removeButtonListener":

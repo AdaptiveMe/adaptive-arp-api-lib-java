@@ -318,13 +318,13 @@ should be passed as a parameter
                case "existsDatabase":
                     Database database6 = getJSONParser().fromJson(request.getParameters()[0], Database.class);
                     boolean response6 = this.existsDatabase(database6);
-                    responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response6));
+                    responseJSON = ""+response6;
                     break;
                case "existsTable":
                     Database database7 = getJSONParser().fromJson(request.getParameters()[0], Database.class);
                     DatabaseTable databaseTable7 = getJSONParser().fromJson(request.getParameters()[1], DatabaseTable.class);
                     boolean response7 = this.existsTable(database7, databaseTable7);
-                    responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response7));
+                    responseJSON = ""+response7;
                     break;
                default:
                     // 404 - response null.

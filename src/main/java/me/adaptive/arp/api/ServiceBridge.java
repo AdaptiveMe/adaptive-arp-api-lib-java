@@ -244,7 +244,7 @@ XML service definition file.
                     ServiceToken serviceToken0 = getJSONParser().fromJson(request.getParameters()[0], ServiceToken.class);
                     ServiceRequest response0 = this.getServiceRequest(serviceToken0);
                     if (response0 != null) {
-                         responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response0));
+                         responseJSON = getJSONParser().toJson(response0);
                     }
                     break;
                case "getServiceToken":
@@ -254,20 +254,20 @@ XML service definition file.
                     IServiceMethod method1 = getJSONParser().fromJson(request.getParameters()[3], IServiceMethod.class);
                     ServiceToken response1 = this.getServiceToken(serviceName1, endpointName1, functionName1, method1);
                     if (response1 != null) {
-                         responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response1));
+                         responseJSON = getJSONParser().toJson(response1);
                     }
                     break;
                case "getServiceTokenByUri":
                     String uri2 = getJSONParser().fromJson(request.getParameters()[0], String.class);
                     ServiceToken response2 = this.getServiceTokenByUri(uri2);
                     if (response2 != null) {
-                         responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response2));
+                         responseJSON = getJSONParser().toJson(response2);
                     }
                     break;
                case "getServicesRegistered":
                     ServiceToken[] response3 = this.getServicesRegistered();
                     if (response3 != null) {
-                         responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response3));
+                         responseJSON = getJSONParser().toJson(response3);
                     }
                     break;
                case "invokeService":
@@ -281,7 +281,7 @@ XML service definition file.
                     String functionName5 = getJSONParser().fromJson(request.getParameters()[2], String.class);
                     IServiceMethod method5 = getJSONParser().fromJson(request.getParameters()[3], IServiceMethod.class);
                     boolean response5 = this.isServiceRegistered(serviceName5, endpointName5, functionName5, method5);
-                    responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response5));
+                    responseJSON = ""+response5;
                     break;
                default:
                     // 404 - response null.

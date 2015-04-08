@@ -452,12 +452,12 @@ new destination file.
                case "canRead":
                     FileDescriptor descriptor0 = getJSONParser().fromJson(request.getParameters()[0], FileDescriptor.class);
                     boolean response0 = this.canRead(descriptor0);
-                    responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response0));
+                    responseJSON = ""+response0;
                     break;
                case "canWrite":
                     FileDescriptor descriptor1 = getJSONParser().fromJson(request.getParameters()[0], FileDescriptor.class);
                     boolean response1 = this.canWrite(descriptor1);
-                    responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response1));
+                    responseJSON = ""+response1;
                     break;
                case "create":
                     FileDescriptor descriptor2 = getJSONParser().fromJson(request.getParameters()[0], FileDescriptor.class);
@@ -468,12 +468,12 @@ new destination file.
                     FileDescriptor descriptor3 = getJSONParser().fromJson(request.getParameters()[0], FileDescriptor.class);
                     boolean cascade3 = getJSONParser().fromJson(request.getParameters()[1], boolean.class);
                     boolean response3 = this.delete(descriptor3, cascade3);
-                    responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response3));
+                    responseJSON = ""+response3;
                     break;
                case "exists":
                     FileDescriptor descriptor4 = getJSONParser().fromJson(request.getParameters()[0], FileDescriptor.class);
                     boolean response4 = this.exists(descriptor4);
-                    responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response4));
+                    responseJSON = ""+response4;
                     break;
                case "getContent":
                     FileDescriptor descriptor5 = getJSONParser().fromJson(request.getParameters()[0], FileDescriptor.class);
@@ -484,27 +484,27 @@ new destination file.
                     FileDescriptor descriptor6 = getJSONParser().fromJson(request.getParameters()[0], FileDescriptor.class);
                     IFileSystemStorageType response6 = this.getFileStorageType(descriptor6);
                     if (response6 != null) {
-                         responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response6));
+                         responseJSON = getJSONParser().toJson(response6);
                     }
                     break;
                case "getFileType":
                     FileDescriptor descriptor7 = getJSONParser().fromJson(request.getParameters()[0], FileDescriptor.class);
                     IFileSystemType response7 = this.getFileType(descriptor7);
                     if (response7 != null) {
-                         responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response7));
+                         responseJSON = getJSONParser().toJson(response7);
                     }
                     break;
                case "getSecurityType":
                     FileDescriptor descriptor8 = getJSONParser().fromJson(request.getParameters()[0], FileDescriptor.class);
                     IFileSystemSecurity response8 = this.getSecurityType(descriptor8);
                     if (response8 != null) {
-                         responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response8));
+                         responseJSON = getJSONParser().toJson(response8);
                     }
                     break;
                case "isDirectory":
                     FileDescriptor descriptor9 = getJSONParser().fromJson(request.getParameters()[0], FileDescriptor.class);
                     boolean response9 = this.isDirectory(descriptor9);
-                    responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response9));
+                    responseJSON = ""+response9;
                     break;
                case "listFiles":
                     FileDescriptor descriptor10 = getJSONParser().fromJson(request.getParameters()[0], FileDescriptor.class);
@@ -521,7 +521,7 @@ new destination file.
                     FileDescriptor descriptor12 = getJSONParser().fromJson(request.getParameters()[0], FileDescriptor.class);
                     boolean recursive12 = getJSONParser().fromJson(request.getParameters()[1], boolean.class);
                     boolean response12 = this.mkDir(descriptor12, recursive12);
-                    responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response12));
+                    responseJSON = ""+response12;
                     break;
                case "move":
                     FileDescriptor source13 = getJSONParser().fromJson(request.getParameters()[0], FileDescriptor.class);

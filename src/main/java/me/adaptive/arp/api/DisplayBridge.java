@@ -180,7 +180,7 @@ of the device. For device orientation, use the IDevice APIs.
                case "getOrientationCurrent":
                     ICapabilitiesOrientation response1 = this.getOrientationCurrent();
                     if (response1 != null) {
-                         responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response1));
+                         responseJSON = getJSONParser().toJson(response1);
                     }
                     break;
                case "removeDisplayOrientationListener":

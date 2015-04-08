@@ -178,7 +178,7 @@ public class LifecycleBridge extends BaseApplicationBridge implements ILifecycle
                     break;
                case "isBackground":
                     boolean response1 = this.isBackground();
-                    responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response1));
+                    responseJSON = ""+response1;
                     break;
                case "removeLifecycleListener":
                     ILifecycleListener listener2 = new LifecycleListenerImpl(request.getAsyncId());

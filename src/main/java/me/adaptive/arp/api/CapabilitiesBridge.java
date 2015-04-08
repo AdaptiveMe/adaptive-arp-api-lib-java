@@ -332,54 +332,54 @@ device.
                case "getOrientationDefault":
                     ICapabilitiesOrientation response0 = this.getOrientationDefault();
                     if (response0 != null) {
-                         responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response0));
+                         responseJSON = getJSONParser().toJson(response0);
                     }
                     break;
                case "getOrientationsSupported":
                     ICapabilitiesOrientation[] response1 = this.getOrientationsSupported();
                     if (response1 != null) {
-                         responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response1));
+                         responseJSON = getJSONParser().toJson(response1);
                     }
                     break;
                case "hasButtonSupport":
                     ICapabilitiesButton type2 = getJSONParser().fromJson(request.getParameters()[0], ICapabilitiesButton.class);
                     boolean response2 = this.hasButtonSupport(type2);
-                    responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response2));
+                    responseJSON = ""+response2;
                     break;
                case "hasCommunicationSupport":
                     ICapabilitiesCommunication type3 = getJSONParser().fromJson(request.getParameters()[0], ICapabilitiesCommunication.class);
                     boolean response3 = this.hasCommunicationSupport(type3);
-                    responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response3));
+                    responseJSON = ""+response3;
                     break;
                case "hasDataSupport":
                     ICapabilitiesData type4 = getJSONParser().fromJson(request.getParameters()[0], ICapabilitiesData.class);
                     boolean response4 = this.hasDataSupport(type4);
-                    responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response4));
+                    responseJSON = ""+response4;
                     break;
                case "hasMediaSupport":
                     ICapabilitiesMedia type5 = getJSONParser().fromJson(request.getParameters()[0], ICapabilitiesMedia.class);
                     boolean response5 = this.hasMediaSupport(type5);
-                    responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response5));
+                    responseJSON = ""+response5;
                     break;
                case "hasNetSupport":
                     ICapabilitiesNet type6 = getJSONParser().fromJson(request.getParameters()[0], ICapabilitiesNet.class);
                     boolean response6 = this.hasNetSupport(type6);
-                    responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response6));
+                    responseJSON = ""+response6;
                     break;
                case "hasNotificationSupport":
                     ICapabilitiesNotification type7 = getJSONParser().fromJson(request.getParameters()[0], ICapabilitiesNotification.class);
                     boolean response7 = this.hasNotificationSupport(type7);
-                    responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response7));
+                    responseJSON = ""+response7;
                     break;
                case "hasOrientationSupport":
                     ICapabilitiesOrientation orientation8 = getJSONParser().fromJson(request.getParameters()[0], ICapabilitiesOrientation.class);
                     boolean response8 = this.hasOrientationSupport(orientation8);
-                    responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response8));
+                    responseJSON = ""+response8;
                     break;
                case "hasSensorSupport":
                     ICapabilitiesSensor type9 = getJSONParser().fromJson(request.getParameters()[0], ICapabilitiesSensor.class);
                     boolean response9 = this.hasSensorSupport(type9);
-                    responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response9));
+                    responseJSON = ""+response9;
                     break;
                default:
                     // 404 - response null.
