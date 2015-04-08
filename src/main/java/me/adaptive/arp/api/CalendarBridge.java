@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.7
+    * @version v2.2.8
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -87,7 +87,7 @@ public class CalendarBridge extends BasePIMBridge implements ICalendar, APIBridg
                default:
                     // 404 - response null.
                     responseCode = 404;
-                    responseMessage = "CalendarBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.7.";
+                    responseMessage = "CalendarBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.8.";
           }
           response.setResponse(responseJSON);
           response.setStatusCode(responseCode);
