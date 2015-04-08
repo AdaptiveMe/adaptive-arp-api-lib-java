@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.6
+    * @version v2.2.7
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -87,7 +87,7 @@ public class ProximityBridge extends BaseSensorBridge implements IProximity, API
                default:
                     // 404 - response null.
                     responseCode = 404;
-                    responseMessage = "ProximityBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.6.";
+                    responseMessage = "ProximityBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.7.";
           }
           response.setResponse(responseJSON);
           response.setStatusCode(responseCode);
