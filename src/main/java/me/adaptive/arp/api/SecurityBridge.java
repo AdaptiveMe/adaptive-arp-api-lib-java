@@ -193,7 +193,7 @@ public class SecurityBridge extends BaseSecurityBridge implements ISecurity, API
                     break;
                case "isDeviceModified":
                     boolean response2 = this.isDeviceModified();
-                    responseJSON = getJSONParser().toJson(response2);
+                    responseJSON = AppRegistryBridge.escapeString(getJSONParser().toJson(response2));
                     break;
                case "setSecureKeyValuePairs":
                     SecureKeyPair[] keyValues3 = getJSONParser().fromJson(request.getParameters()[0], SecureKeyPair[].class);

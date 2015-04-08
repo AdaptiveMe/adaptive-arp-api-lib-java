@@ -157,13 +157,13 @@ public class AppRegistryBridge implements IAppRegistry {
                singletonGsonBuilder.registerTypeAdapter(INetworkStatusListenerError.class, new INetworkStatusListenerErrorAdapter());
                singletonGsonBuilder.registerTypeAdapter(IContactFilter.class, new IContactFilterAdapter());
                singletonGsonBuilder.registerTypeAdapter(IContactFieldGroup.class, new IContactFieldGroupAdapter());
-               singletonGsonBuilder.registerTypeAdapter(ICapabilitiesMedia.class, new ICapabilitiesMediaAdapter());
                singletonGsonBuilder.registerTypeAdapter(ICapabilitiesSensor.class, new ICapabilitiesSensorAdapter());
-               singletonGsonBuilder.registerTypeAdapter(ICapabilitiesData.class, new ICapabilitiesDataAdapter());
                singletonGsonBuilder.registerTypeAdapter(ICapabilitiesCommunication.class, new ICapabilitiesCommunicationAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ICapabilitiesData.class, new ICapabilitiesDataAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ICapabilitiesMedia.class, new ICapabilitiesMediaAdapter());
                singletonGsonBuilder.registerTypeAdapter(ICapabilitiesNet.class, new ICapabilitiesNetAdapter());
-               singletonGsonBuilder.registerTypeAdapter(ICapabilitiesButton.class, new ICapabilitiesButtonAdapter());
                singletonGsonBuilder.registerTypeAdapter(ICapabilitiesNotification.class, new ICapabilitiesNotificationAdapter());
+               singletonGsonBuilder.registerTypeAdapter(ICapabilitiesButton.class, new ICapabilitiesButtonAdapter());
                singletonGsonBuilder.registerTypeAdapter(ICapabilitiesOrientation.class, new ICapabilitiesOrientationAdapter());
                singletonGsonBuilder.registerTypeAdapter(ILoggingLogLevel.class, new ILoggingLogLevelAdapter());
                singletonGsonBuilder.registerTypeAdapter(IServiceCertificateValidation.class, new IServiceCertificateValidationAdapter());
