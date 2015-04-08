@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.8
+    * @version v2.2.9
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -65,7 +65,7 @@ public class BaseDataDelegate implements IBaseData {
      */
      @Override
      public String getAPIVersion() {
-          return "v2.2.8";
+          return "v2.2.9";
      }
 
 }
