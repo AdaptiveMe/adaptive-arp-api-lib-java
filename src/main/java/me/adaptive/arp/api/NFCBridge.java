@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.9
+    * @version v2.2.10
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -87,7 +87,7 @@ public class NFCBridge extends BaseReaderBridge implements INFC, APIBridge {
                default:
                     // 404 - response null.
                     responseCode = 404;
-                    responseMessage = "NFCBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.9.";
+                    responseMessage = "NFCBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.10.";
           }
           response.setResponse(responseJSON);
           response.setStatusCode(responseCode);

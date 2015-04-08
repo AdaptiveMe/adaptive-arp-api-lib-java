@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.9
+    * @version v2.2.10
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -67,7 +67,7 @@ public class BaseSecurityBridge implements IBaseSecurity {
      */
      @Override
      public String getAPIVersion() {
-          return "v2.2.9";
+          return "v2.2.10";
      }
 
      /**
@@ -93,7 +93,7 @@ public class BaseSecurityBridge implements IBaseSecurity {
                default:
                     // 404 - response null.
                     responseCode = 404;
-                    responseMessage = "BaseSecurityBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.9.";
+                    responseMessage = "BaseSecurityBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.10.";
           }
           response.setResponse(responseJSON);
           response.setStatusCode(responseCode);
