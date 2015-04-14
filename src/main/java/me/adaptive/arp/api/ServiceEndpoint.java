@@ -41,7 +41,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public class ServiceEndpoint {
+public class ServiceEndpoint extends APIBean {
 
      /**
         Type of validation to be performed for SSL hosts.
@@ -72,7 +72,7 @@ public class ServiceEndpoint {
         @since v2.0.6
      */
      public ServiceEndpoint(String hostURI, ServicePath[] paths) {
-          this();
+          super();
           this.hostURI = hostURI;
           this.paths = paths;
      }

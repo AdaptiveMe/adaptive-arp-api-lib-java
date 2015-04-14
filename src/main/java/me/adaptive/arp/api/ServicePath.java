@@ -41,7 +41,7 @@ package me.adaptive.arp.api;
    @since v2.0.4
    @version 1.0
 */
-public class ServicePath {
+public class ServicePath extends APIBean {
 
      /**
         Service endpoint type.
@@ -73,7 +73,7 @@ public class ServicePath {
         @since v2.0.6
      */
      public ServicePath(String path, IServiceMethod[] methods, IServiceType type) {
-          this();
+          super();
           this.path = path;
           this.methods = methods;
           this.type = type;

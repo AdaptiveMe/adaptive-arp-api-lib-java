@@ -41,7 +41,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public class Service {
+public class Service extends APIBean {
 
      /**
         The service name
@@ -68,7 +68,7 @@ public class Service {
         @since v2.0.6
      */
      public Service(ServiceEndpoint[] serviceEndpoints, String name) {
-          this();
+          super();
           this.serviceEndpoints = serviceEndpoints;
           this.name = name;
      }
