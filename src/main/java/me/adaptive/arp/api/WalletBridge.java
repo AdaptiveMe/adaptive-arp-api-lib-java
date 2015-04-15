@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.10
+    * @version v2.2.11
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -87,7 +87,7 @@ public class WalletBridge extends BaseCommerceBridge implements IWallet, APIBrid
                default:
                     // 404 - response null.
                     responseCode = 404;
-                    responseMessage = "WalletBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.10.";
+                    responseMessage = "WalletBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.11.";
           }
           response.setResponse(responseJSON);
           response.setStatusCode(responseCode);
