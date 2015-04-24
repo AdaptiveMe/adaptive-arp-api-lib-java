@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.11
+    * @version v2.2.12
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -67,7 +67,7 @@ public class BaseUIBridge implements IBaseUI {
      */
      @Override
      public String getAPIVersion() {
-          return "v2.2.11";
+          return "v2.2.12";
      }
 
      /**
@@ -93,7 +93,7 @@ public class BaseUIBridge implements IBaseUI {
                default:
                     // 404 - response null.
                     responseCode = 404;
-                    responseMessage = "BaseUIBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.11.";
+                    responseMessage = "BaseUIBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.12.";
           }
           response.setResponse(responseJSON);
           response.setStatusCode(responseCode);

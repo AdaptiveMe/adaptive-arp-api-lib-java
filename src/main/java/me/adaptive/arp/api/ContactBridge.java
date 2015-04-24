@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.11
+    * @version v2.2.12
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -316,7 +316,7 @@ public class ContactBridge extends BasePIMBridge implements IContact, APIBridge 
                default:
                     // 404 - response null.
                     responseCode = 404;
-                    responseMessage = "ContactBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.11.";
+                    responseMessage = "ContactBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.12.";
           }
           response.setResponse(responseJSON);
           response.setStatusCode(responseCode);
