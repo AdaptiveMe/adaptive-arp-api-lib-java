@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Cloud operations
    Auto-generated implementation of IDatabaseTableResultCallback specification.
 */
-public class DatabaseTableResultCallbackImpl extends BaseCallbackImpl implements IDatabaseTableResultCallback {
+public class DatabaseTableResultCallbackImpl extends BaseCallbackImpl implements IDatabaseTableResultCallback, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100467489L;
 
      /**
         Constructor with callback id.

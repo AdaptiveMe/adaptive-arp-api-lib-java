@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Base application for Utility purposes
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface IBaseUtil extends IAdaptiveRP {
+public interface IBaseUtil extends IAdaptiveRP, Serializable {
 }
 
 /**

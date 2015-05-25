@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Network status listener networkEvents
    Auto-generated implementation of INetworkStatusListener specification.
 */
-public class NetworkStatusListenerImpl extends BaseListenerImpl implements INetworkStatusListener {
+public class NetworkStatusListenerImpl extends BaseListenerImpl implements INetworkStatusListener, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100433542L;
 
      /**
         Constructor with listener id.

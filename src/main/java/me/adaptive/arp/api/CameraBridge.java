@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the camera operations
    Auto-generated implementation of ICamera specification.
 */
-public class CameraBridge extends BaseMediaBridge implements ICamera, APIBridge {
+public class CameraBridge extends BaseMediaBridge implements ICamera, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100252155L;
 
      /**
         API Delegate.

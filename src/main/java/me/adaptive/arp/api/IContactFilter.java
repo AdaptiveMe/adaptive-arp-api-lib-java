@@ -34,15 +34,23 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration IContactFilter
 */
-public enum IContactFilter {
+public enum IContactFilter implements Serializable {
 
      HasPhone,
      HasEmail,
      HasAddress,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100334340L;
 
 }
 /**

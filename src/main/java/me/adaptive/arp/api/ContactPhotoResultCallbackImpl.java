@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Contact operations
    Auto-generated implementation of IContactPhotoResultCallback specification.
 */
-public class ContactPhotoResultCallbackImpl extends BaseCallbackImpl implements IContactPhotoResultCallback {
+public class ContactPhotoResultCallbackImpl extends BaseCallbackImpl implements IContactPhotoResultCallback, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100470564L;
 
      /**
         Constructor with callback id.

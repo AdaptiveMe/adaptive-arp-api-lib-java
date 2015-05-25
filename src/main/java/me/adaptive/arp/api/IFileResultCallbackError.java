@@ -34,10 +34,12 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration IFileResultCallbackError
 */
-public enum IFileResultCallbackError {
+public enum IFileResultCallbackError implements Serializable {
 
      FileExists,
      SourceInexistent,
@@ -45,6 +47,12 @@ public enum IFileResultCallbackError {
      InsufficientSpace,
      Unauthorized,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100435374L;
 
 }
 /**

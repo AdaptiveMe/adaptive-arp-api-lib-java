@@ -34,10 +34,12 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration ICapabilitiesCommunication
 */
-public enum ICapabilitiesCommunication {
+public enum ICapabilitiesCommunication implements Serializable {
 
      Calendar,
      Contact,
@@ -45,6 +47,12 @@ public enum ICapabilitiesCommunication {
      Messaging,
      Telephony,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100467640L;
 
 }
 /**

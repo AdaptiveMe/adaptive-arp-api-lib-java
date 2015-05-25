@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Structure representing a remote or local service access end-point.
 
@@ -41,7 +43,13 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public class ServiceEndpoint extends APIBean {
+public class ServiceEndpoint extends APIBean implements Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100351785L;
 
      /**
         Type of validation to be performed for SSL hosts.

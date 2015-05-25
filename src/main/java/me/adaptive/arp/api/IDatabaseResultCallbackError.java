@@ -34,15 +34,23 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration IDatabaseResultCallbackError
 */
-public enum IDatabaseResultCallbackError {
+public enum IDatabaseResultCallbackError implements Serializable {
 
      NoSpace,
      SqlException,
      NotDeleted,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100476921L;
 
 }
 /**

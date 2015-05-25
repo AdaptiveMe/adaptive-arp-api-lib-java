@@ -43,11 +43,18 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
+import java.io.Serializable;
 
 /**
    IGeolocationListenerError custom serializer/deserializer.
 */
-public class IGeolocationListenerErrorAdapter implements JsonDeserializer<IGeolocationListenerError>, JsonSerializer<IGeolocationListenerError> {
+public class IGeolocationListenerErrorAdapter implements JsonDeserializer<IGeolocationListenerError>, JsonSerializer<IGeolocationListenerError>, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100459776L;
 
      @Override
      public IGeolocationListenerError deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

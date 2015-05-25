@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the File result operations
    Auto-generated implementation of IFileListResultCallback specification.
 */
-public class FileListResultCallbackImpl extends BaseCallbackImpl implements IFileListResultCallback {
+public class FileListResultCallbackImpl extends BaseCallbackImpl implements IFileListResultCallback, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100421490L;
 
      /**
         Constructor with callback id.

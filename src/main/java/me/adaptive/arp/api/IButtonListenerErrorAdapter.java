@@ -43,11 +43,18 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
+import java.io.Serializable;
 
 /**
    IButtonListenerError custom serializer/deserializer.
 */
-public class IButtonListenerErrorAdapter implements JsonDeserializer<IButtonListenerError>, JsonSerializer<IButtonListenerError> {
+public class IButtonListenerErrorAdapter implements JsonDeserializer<IButtonListenerError>, JsonSerializer<IButtonListenerError>, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100409494L;
 
      @Override
      public IButtonListenerError deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

@@ -43,11 +43,18 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
+import java.io.Serializable;
 
 /**
    IContactFilter custom serializer/deserializer.
 */
-public class IContactFilterAdapter implements JsonDeserializer<IContactFilter>, JsonSerializer<IContactFilter> {
+public class IContactFilterAdapter implements JsonDeserializer<IContactFilter>, JsonSerializer<IContactFilter>, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100334340L;
 
      @Override
      public IContactFilter deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Represents a network handover event on the system.
 
@@ -41,7 +43,13 @@ package me.adaptive.arp.api;
    @since v2.2.1
    @version 1.0
 */
-public class NetworkEvent extends APIBean {
+public class NetworkEvent extends APIBean implements Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100323551L;
 
      /**
         New type of network of the event

@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Structure representing a HTML5 request to the native API.
 
@@ -41,7 +43,13 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public class APIRequest {
+public class APIRequest implements Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100284660L;
 
      /**
         Identifier of API version of this request.

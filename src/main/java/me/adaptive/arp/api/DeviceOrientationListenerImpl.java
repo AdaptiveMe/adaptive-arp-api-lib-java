@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for handling device orientation change events.
    Auto-generated implementation of IDeviceOrientationListener specification.
 */
-public class DeviceOrientationListenerImpl extends BaseListenerImpl implements IDeviceOrientationListener {
+public class DeviceOrientationListenerImpl extends BaseListenerImpl implements IDeviceOrientationListener, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100466856L;
 
      /**
         Constructor with listener id.

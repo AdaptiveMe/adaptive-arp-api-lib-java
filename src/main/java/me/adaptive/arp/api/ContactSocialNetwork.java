@@ -34,10 +34,12 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration ContactSocialNetwork
 */
-public enum ContactSocialNetwork {
+public enum ContactSocialNetwork implements Serializable {
 
      Twitter,
      Facebook,
@@ -45,6 +47,12 @@ public enum ContactSocialNetwork {
      LinkedIn,
      Flickr,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100467655L;
 
 }
 /**

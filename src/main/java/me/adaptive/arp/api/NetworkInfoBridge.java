@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Network information operations
    Auto-generated implementation of INetworkInfo specification.
 */
-public class NetworkInfoBridge extends BaseCommunicationBridge implements INetworkInfo, APIBridge {
+public class NetworkInfoBridge extends BaseCommunicationBridge implements INetworkInfo, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100314592L;
 
      /**
         API Delegate.

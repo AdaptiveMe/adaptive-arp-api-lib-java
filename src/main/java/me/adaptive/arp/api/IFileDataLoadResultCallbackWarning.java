@@ -34,13 +34,21 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration IFileDataLoadResultCallbackWarning
 */
-public enum IFileDataLoadResultCallbackWarning {
+public enum IFileDataLoadResultCallbackWarning implements Serializable {
 
      ExceedMaximumSize,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100529516L;
 
 }
 /**

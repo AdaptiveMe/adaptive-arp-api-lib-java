@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Interface for Managing the Security operations
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface ISecurity extends IBaseSecurity {
+public interface ISecurity extends IBaseSecurity, Serializable {
      /**
         Deletes from the device internal storage the entry/entries containing the specified key names.
 

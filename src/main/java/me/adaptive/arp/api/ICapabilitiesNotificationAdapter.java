@@ -43,11 +43,18 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
+import java.io.Serializable;
 
 /**
    ICapabilitiesNotification custom serializer/deserializer.
 */
-public class ICapabilitiesNotificationAdapter implements JsonDeserializer<ICapabilitiesNotification>, JsonSerializer<ICapabilitiesNotification> {
+public class ICapabilitiesNotificationAdapter implements JsonDeserializer<ICapabilitiesNotification>, JsonSerializer<ICapabilitiesNotification>, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100454569L;
 
      @Override
      public ICapabilitiesNotification deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

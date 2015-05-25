@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Structure representing the data of a http request or response header.
 
@@ -41,7 +43,13 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public class ServiceHeader extends KeyValue {
+public class ServiceHeader extends KeyValue implements Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100321469L;
 
 
      /**

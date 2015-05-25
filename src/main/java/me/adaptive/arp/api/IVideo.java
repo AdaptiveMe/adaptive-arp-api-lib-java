@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Interface for Managing the Video operations
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface IVideo extends IBaseMedia {
+public interface IVideo extends IBaseMedia, Serializable {
      /**
         Play url video stream
 

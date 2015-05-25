@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Represents a specific user or system locate.
 
@@ -41,7 +43,13 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public class Locale extends APIBean {
+public class Locale extends APIBean implements Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100247613L;
 
      /**
         A valid ISO Country Code.

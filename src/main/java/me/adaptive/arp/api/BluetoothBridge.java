@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Bluetooth purposes
    Auto-generated implementation of IBluetooth specification.
 */
-public class BluetoothBridge extends BaseCommunicationBridge implements IBluetooth, APIBridge {
+public class BluetoothBridge extends BaseCommunicationBridge implements IBluetooth, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100296050L;
 
      /**
         API Delegate.

@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Interface for Managing the File operations
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface IFile extends IBaseData {
+public interface IFile extends IBaseData, Serializable {
      /**
         Determine whether the current file/folder can be read from.
 

@@ -34,10 +34,12 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration INetworkReachabilityCallbackError
 */
-public enum INetworkReachabilityCallbackError {
+public enum INetworkReachabilityCallbackError implements Serializable {
 
      Forbidden,
      NotFound,
@@ -51,6 +53,12 @@ public enum INetworkReachabilityCallbackError {
      MalformedUrl,
      DomainUnresolvable,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100537068L;
 
 }
 /**

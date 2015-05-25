@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Interface for Managing the Messaging responses
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface IMessagingCallback extends IBaseCallback {
+public interface IMessagingCallback extends IBaseCallback, Serializable {
      /**
         This method is called on Error
 

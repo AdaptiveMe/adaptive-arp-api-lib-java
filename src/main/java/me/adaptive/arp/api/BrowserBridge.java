@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the browser operations
    Auto-generated implementation of IBrowser specification.
 */
-public class BrowserBridge extends BaseUIBridge implements IBrowser, APIBridge {
+public class BrowserBridge extends BaseUIBridge implements IBrowser, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100274026L;
 
      /**
         API Delegate.

@@ -34,13 +34,21 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration ISecurityResultCallbackWarning
 */
-public enum ISecurityResultCallbackWarning {
+public enum ISecurityResultCallbackWarning implements Serializable {
 
      EntryOverride,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100510020L;
 
 }
 /**

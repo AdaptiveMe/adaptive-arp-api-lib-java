@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Interface for Managing the Globalization results
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface IGlobalization extends IBaseApplication {
+public interface IGlobalization extends IBaseApplication, Serializable {
      /**
         Returns the default locale of the application defined in the configuration file
 

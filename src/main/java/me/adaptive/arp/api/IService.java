@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Interface for Managing the Services operations
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface IService extends IBaseCommunication {
+public interface IService extends IBaseCommunication, Serializable {
      /**
         Create a service request for the given ServiceToken. This method creates the request, populating
 existing headers and cookies for the same service. The request is populated with all the defaults

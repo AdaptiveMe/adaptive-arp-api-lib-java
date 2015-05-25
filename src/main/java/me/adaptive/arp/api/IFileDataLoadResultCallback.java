@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Interface for Managing the File loading callback responses
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface IFileDataLoadResultCallback extends IBaseCallback {
+public interface IFileDataLoadResultCallback extends IBaseCallback, Serializable {
      /**
         Error processing data retrieval/storage operation.
 

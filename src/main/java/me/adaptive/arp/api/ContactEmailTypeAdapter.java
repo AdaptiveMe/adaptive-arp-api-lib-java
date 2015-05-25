@@ -43,11 +43,18 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
+import java.io.Serializable;
 
 /**
    ContactEmailType custom serializer/deserializer.
 */
-public class ContactEmailTypeAdapter implements JsonDeserializer<ContactEmailType>, JsonSerializer<ContactEmailType> {
+public class ContactEmailTypeAdapter implements JsonDeserializer<ContactEmailType>, JsonSerializer<ContactEmailType>, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100406691L;
 
      @Override
      public ContactEmailType deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

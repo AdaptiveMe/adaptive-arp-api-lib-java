@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Video operations
    Auto-generated implementation of IVideo specification.
 */
-public class VideoBridge extends BaseMediaBridge implements IVideo, APIBridge {
+public class VideoBridge extends BaseMediaBridge implements IVideo, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100244713L;
 
      /**
         API Delegate.

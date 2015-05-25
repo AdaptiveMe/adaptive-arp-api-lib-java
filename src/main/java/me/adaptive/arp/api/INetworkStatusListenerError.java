@@ -34,14 +34,22 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration INetworkStatusListenerError
 */
-public enum INetworkStatusListenerError {
+public enum INetworkStatusListenerError implements Serializable {
 
      NoPermission,
      Unreachable,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100490908L;
 
 }
 /**

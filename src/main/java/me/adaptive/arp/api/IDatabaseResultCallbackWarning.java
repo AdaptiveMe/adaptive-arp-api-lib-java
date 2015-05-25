@@ -34,14 +34,22 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration IDatabaseResultCallbackWarning
 */
-public enum IDatabaseResultCallbackWarning {
+public enum IDatabaseResultCallbackWarning implements Serializable {
 
      DatabaseExists,
      IsOpen,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100496659L;
 
 }
 /**

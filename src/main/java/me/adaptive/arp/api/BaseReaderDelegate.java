@@ -34,11 +34,19 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Base application for Reader purposes
    Auto-generated implementation of IBaseReader specification.
 */
-public class BaseReaderDelegate implements IBaseReader {
+public class BaseReaderDelegate implements IBaseReader, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100290492L;
 
      /**
         Group of API.

@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Barometer management purposes
    Auto-generated implementation of IBarometer specification.
 */
-public class BarometerBridge extends BaseSensorBridge implements IBarometer, APIBridge {
+public class BarometerBridge extends BaseSensorBridge implements IBarometer, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100291587L;
 
      /**
         API Delegate.

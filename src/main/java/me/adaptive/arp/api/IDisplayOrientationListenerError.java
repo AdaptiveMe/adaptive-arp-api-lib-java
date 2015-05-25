@@ -34,12 +34,20 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration IDisplayOrientationListenerError
 */
-public enum IDisplayOrientationListenerError {
+public enum IDisplayOrientationListenerError implements Serializable {
 
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100541578L;
 
 }
 /**

@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Cloud operations
    Auto-generated implementation of ICloud specification.
 */
-public class CloudBridge extends BaseDataBridge implements ICloud, APIBridge {
+public class CloudBridge extends BaseDataBridge implements ICloud, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100245933L;
 
      /**
         API Delegate.

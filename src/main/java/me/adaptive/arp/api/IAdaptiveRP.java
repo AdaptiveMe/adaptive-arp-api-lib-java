@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Master interface for all the Groups and Types of Interfaces os the Project
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface IAdaptiveRP {
+public interface IAdaptiveRP extends Serializable {
      /**
         Method that returns the API group of the implementation
 

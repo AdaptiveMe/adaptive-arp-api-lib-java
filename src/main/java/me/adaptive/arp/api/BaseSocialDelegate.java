@@ -34,11 +34,19 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Base application for Social purposes
    Auto-generated implementation of IBaseSocial specification.
 */
-public class BaseSocialDelegate implements IBaseSocial {
+public class BaseSocialDelegate implements IBaseSocial, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100292070L;
 
      /**
         Group of API.

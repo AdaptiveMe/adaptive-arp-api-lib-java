@@ -43,11 +43,18 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
+import java.io.Serializable;
 
 /**
    ITelephonyStatus custom serializer/deserializer.
 */
-public class ITelephonyStatusAdapter implements JsonDeserializer<ITelephonyStatus>, JsonSerializer<ITelephonyStatus> {
+public class ITelephonyStatusAdapter implements JsonDeserializer<ITelephonyStatus>, JsonSerializer<ITelephonyStatus>, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100366734L;
 
      @Override
      public ITelephonyStatus deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

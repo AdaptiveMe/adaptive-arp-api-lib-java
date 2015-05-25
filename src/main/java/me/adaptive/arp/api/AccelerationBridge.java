@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface defining methods about the acceleration sensor
    Auto-generated implementation of IAcceleration specification.
 */
-public class AccelerationBridge extends BaseSensorBridge implements IAcceleration, APIBridge {
+public class AccelerationBridge extends BaseSensorBridge implements IAcceleration, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100320970L;
 
      /**
         API Delegate.

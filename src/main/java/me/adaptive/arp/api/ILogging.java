@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Interface for Managing the Logging operations
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface ILogging extends IBaseUtil {
+public interface ILogging extends IBaseUtil, Serializable {
      /**
         Logs the given message, with the given log level if specified, to the standard platform/environment.
 

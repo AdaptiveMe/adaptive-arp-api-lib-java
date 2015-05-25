@@ -34,10 +34,12 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration IFileSystemStorageType
 */
-public enum IFileSystemStorageType {
+public enum IFileSystemStorageType implements Serializable {
 
      Application,
      Document,
@@ -46,6 +48,12 @@ public enum IFileSystemStorageType {
      Cache,
      External,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100461262L;
 
 }
 /**

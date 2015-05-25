@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Geolocation results
    Auto-generated implementation of IGeolocationListener specification.
 */
-public class GeolocationListenerImpl extends BaseListenerImpl implements IGeolocationListener {
+public class GeolocationListenerImpl extends BaseListenerImpl implements IGeolocationListener, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100402410L;
 
      /**
         Constructor with listener id.

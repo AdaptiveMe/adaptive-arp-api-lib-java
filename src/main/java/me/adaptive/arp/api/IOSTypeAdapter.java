@@ -43,11 +43,18 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
+import java.io.Serializable;
 
 /**
    IOSType custom serializer/deserializer.
 */
-public class IOSTypeAdapter implements JsonDeserializer<IOSType>, JsonSerializer<IOSType> {
+public class IOSTypeAdapter implements JsonDeserializer<IOSType>, JsonSerializer<IOSType>, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100252638L;
 
      @Override
      public IOSType deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the XML operations
    Auto-generated implementation of IXML specification.
 */
-public class XMLBridge extends BaseDataBridge implements IXML, APIBridge {
+public class XMLBridge extends BaseDataBridge implements IXML, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100213219L;
 
      /**
         API Delegate.

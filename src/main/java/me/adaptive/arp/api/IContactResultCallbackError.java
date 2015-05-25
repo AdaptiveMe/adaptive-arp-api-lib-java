@@ -34,14 +34,22 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration IContactResultCallbackError
 */
-public enum IContactResultCallbackError {
+public enum IContactResultCallbackError implements Serializable {
 
      NoPermission,
      WrongParams,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100472616L;
 
 }
 /**

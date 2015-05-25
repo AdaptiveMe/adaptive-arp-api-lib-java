@@ -43,11 +43,18 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
+import java.io.Serializable;
 
 /**
    IFileSystemStorageType custom serializer/deserializer.
 */
-public class IFileSystemStorageTypeAdapter implements JsonDeserializer<IFileSystemStorageType>, JsonSerializer<IFileSystemStorageType> {
+public class IFileSystemStorageTypeAdapter implements JsonDeserializer<IFileSystemStorageType>, JsonSerializer<IFileSystemStorageType>, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100461262L;
 
      @Override
      public IFileSystemStorageType deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

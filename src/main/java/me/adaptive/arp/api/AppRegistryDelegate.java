@@ -34,11 +34,19 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Interface to retrieve auto-registered service implementation references.
    Auto-generated implementation of IAppRegistry specification.
 */
-public class AppRegistryDelegate implements IAppRegistry {
+public class AppRegistryDelegate implements IAppRegistry, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100315960L;
 
      /**
         Default Constructor.

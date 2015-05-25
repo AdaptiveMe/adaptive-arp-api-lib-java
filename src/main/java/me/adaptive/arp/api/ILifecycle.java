@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Interface for Managing the Lifecycle listeners
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface ILifecycle extends IBaseApplication {
+public interface ILifecycle extends IBaseApplication, Serializable {
      /**
         Add the listener for the lifecycle of the app
 

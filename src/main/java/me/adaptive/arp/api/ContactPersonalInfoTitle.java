@@ -34,16 +34,24 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration ContactPersonalInfoTitle
 */
-public enum ContactPersonalInfoTitle {
+public enum ContactPersonalInfoTitle implements Serializable {
 
      Mr,
      Mrs,
      Ms,
      Dr,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100446641L;
 
 }
 /**

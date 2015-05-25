@@ -35,12 +35,13 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Base application for PIM purposes
    Auto-generated implementation of IBasePIM specification.
 */
-public class BasePIMBridge implements IBasePIM {
+public class BasePIMBridge implements IBasePIM, Serializable {
 
      /**
         Group of API.

@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Barcode Reading purposes
    Auto-generated implementation of IBarcode specification.
 */
-public class BarcodeBridge extends BaseReaderBridge implements IBarcode, APIBridge {
+public class BarcodeBridge extends BaseReaderBridge implements IBarcode, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100262854L;
 
      /**
         API Delegate.

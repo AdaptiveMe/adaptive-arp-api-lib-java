@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Proximity operations
    Auto-generated implementation of IProximity specification.
 */
-public class ProximityBridge extends BaseSensorBridge implements IProximity, APIBridge {
+public class ProximityBridge extends BaseSensorBridge implements IProximity, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100301915L;
 
      /**
         API Delegate.

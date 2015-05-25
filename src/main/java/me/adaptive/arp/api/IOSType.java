@@ -34,10 +34,12 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration IOSType
 */
-public enum IOSType {
+public enum IOSType implements Serializable {
 
      iOS,
      OSX,
@@ -51,6 +53,12 @@ public enum IOSType {
      Chromium,
      Unspecified,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100252638L;
 
 }
 /**

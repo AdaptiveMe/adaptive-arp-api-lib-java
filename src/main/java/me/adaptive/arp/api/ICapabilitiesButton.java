@@ -34,15 +34,23 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration ICapabilitiesButton
 */
-public enum ICapabilitiesButton {
+public enum ICapabilitiesButton implements Serializable {
 
      HomeButton,
      BackButton,
      OptionButton,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100391520L;
 
 }
 /**

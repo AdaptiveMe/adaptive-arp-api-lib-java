@@ -34,10 +34,12 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration ICapabilitiesNet
 */
-public enum ICapabilitiesNet {
+public enum ICapabilitiesNet implements Serializable {
 
      GSM,
      GPRS,
@@ -47,6 +49,12 @@ public enum ICapabilitiesNet {
      Ethernet,
      Unavailable,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100351883L;
 
 }
 /**

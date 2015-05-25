@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Cloud operations
    Auto-generated implementation of IDatabase specification.
 */
-public class DatabaseBridge extends BaseDataBridge implements IDatabase, APIBridge {
+public class DatabaseBridge extends BaseDataBridge implements IDatabase, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100273107L;
 
      /**
         API Delegate.

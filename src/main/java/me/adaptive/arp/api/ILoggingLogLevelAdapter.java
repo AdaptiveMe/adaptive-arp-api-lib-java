@@ -43,11 +43,18 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
+import java.io.Serializable;
 
 /**
    ILoggingLogLevel custom serializer/deserializer.
 */
-public class ILoggingLogLevelAdapter implements JsonDeserializer<ILoggingLogLevel>, JsonSerializer<ILoggingLogLevel> {
+public class ILoggingLogLevelAdapter implements JsonDeserializer<ILoggingLogLevel>, JsonSerializer<ILoggingLogLevel>, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100348587L;
 
      @Override
      public ILoggingLogLevel deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

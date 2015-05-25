@@ -34,11 +34,19 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Base application for Commerce purposes
    Auto-generated implementation of IBaseCommerce specification.
 */
-public class BaseCommerceDelegate implements IBaseCommerce {
+public class BaseCommerceDelegate implements IBaseCommerce, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100314732L;
 
      /**
         Group of API.

@@ -43,11 +43,18 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
+import java.io.Serializable;
 
 /**
    ContactPersonalInfoTitle custom serializer/deserializer.
 */
-public class ContactPersonalInfoTitleAdapter implements JsonDeserializer<ContactPersonalInfoTitle>, JsonSerializer<ContactPersonalInfoTitle> {
+public class ContactPersonalInfoTitleAdapter implements JsonDeserializer<ContactPersonalInfoTitle>, JsonSerializer<ContactPersonalInfoTitle>, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100446641L;
 
      @Override
      public ContactPersonalInfoTitle deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

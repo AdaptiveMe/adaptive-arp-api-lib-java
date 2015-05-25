@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Base application for Sensor purposes
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface IBaseSensor extends IAdaptiveRP {
+public interface IBaseSensor extends IAdaptiveRP, Serializable {
 }
 
 /**

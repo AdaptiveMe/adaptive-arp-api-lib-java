@@ -34,14 +34,22 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration IMessagingCallbackWarning
 */
-public enum IMessagingCallbackWarning {
+public enum IMessagingCallbackWarning implements Serializable {
 
      UnableToSentAll,
      UnableToFetchAttachment,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100444695L;
 
 }
 /**

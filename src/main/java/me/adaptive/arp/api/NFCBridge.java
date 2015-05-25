@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the NFC operations
    Auto-generated implementation of INFC specification.
 */
-public class NFCBridge extends BaseReaderBridge implements INFC, APIBridge {
+public class NFCBridge extends BaseReaderBridge implements INFC, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100209243L;
 
      /**
         API Delegate.

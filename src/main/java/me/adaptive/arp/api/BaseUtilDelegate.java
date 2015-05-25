@@ -34,11 +34,19 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Base application for Utility purposes
    Auto-generated implementation of IBaseUtil specification.
 */
-public class BaseUtilDelegate implements IBaseUtil {
+public class BaseUtilDelegate implements IBaseUtil, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100274331L;
 
      /**
         Group of API.

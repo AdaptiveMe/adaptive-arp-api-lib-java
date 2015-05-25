@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Messaging responses
    Auto-generated implementation of IMessagingCallback specification.
 */
-public class MessagingCallbackImpl extends BaseCallbackImpl implements IMessagingCallback {
+public class MessagingCallbackImpl extends BaseCallbackImpl implements IMessagingCallback, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100367591L;
 
      /**
         Constructor with callback id.

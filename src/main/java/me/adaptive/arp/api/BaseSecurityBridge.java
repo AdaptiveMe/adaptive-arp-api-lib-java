@@ -35,12 +35,13 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Base application for Security purposes
    Auto-generated implementation of IBaseSecurity specification.
 */
-public class BaseSecurityBridge implements IBaseSecurity {
+public class BaseSecurityBridge implements IBaseSecurity, Serializable {
 
      /**
         Group of API.

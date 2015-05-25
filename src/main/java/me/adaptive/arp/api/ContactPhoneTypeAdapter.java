@@ -43,11 +43,18 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
+import java.io.Serializable;
 
 /**
    ContactPhoneType custom serializer/deserializer.
 */
-public class ContactPhoneTypeAdapter implements JsonDeserializer<ContactPhoneType>, JsonSerializer<ContactPhoneType> {
+public class ContactPhoneTypeAdapter implements JsonDeserializer<ContactPhoneType>, JsonSerializer<ContactPhoneType>, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100412887L;
 
      @Override
      public ContactPhoneType deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

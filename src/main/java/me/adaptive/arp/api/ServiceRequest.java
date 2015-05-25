@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Represents a local or remote service request.
 
@@ -41,7 +43,13 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public class ServiceRequest extends APIBean {
+public class ServiceRequest extends APIBean implements Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100343743L;
 
      /**
         Encoding of the content - by default assumed to be UTF8. This may be populated by the application, the platform

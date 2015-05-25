@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Facebook operations
    Auto-generated implementation of IFacebook specification.
 */
-public class FacebookBridge extends BaseSocialBridge implements IFacebook, APIBridge {
+public class FacebookBridge extends BaseSocialBridge implements IFacebook, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100273776L;
 
      /**
         API Delegate.

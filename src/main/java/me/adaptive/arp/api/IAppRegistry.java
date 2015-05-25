@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Interface to retrieve auto-registered service implementation references.
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface IAppRegistry {
+public interface IAppRegistry extends Serializable {
      /**
         Returns a reference to the registered AccelerationBridge.
 

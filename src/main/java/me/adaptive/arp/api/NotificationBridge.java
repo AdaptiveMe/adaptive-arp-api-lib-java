@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Notification operations
    Auto-generated implementation of INotification specification.
 */
-public class NotificationBridge extends BaseNotificationBridge implements INotification, APIBridge {
+public class NotificationBridge extends BaseNotificationBridge implements INotification, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100326197L;
 
      /**
         API Delegate.

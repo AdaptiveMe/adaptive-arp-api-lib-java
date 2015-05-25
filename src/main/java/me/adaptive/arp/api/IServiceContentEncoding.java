@@ -34,16 +34,24 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration IServiceContentEncoding
 */
-public enum IServiceContentEncoding {
+public enum IServiceContentEncoding implements Serializable {
 
      Ascii,
      Utf8,
      IsoLatin1,
      Unicode,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100430943L;
 
 }
 /**

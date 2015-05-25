@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Interface for Managing the Network reachability operations
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface INetworkReachability extends IBaseCommunication {
+public interface INetworkReachability extends IBaseCommunication, Serializable {
      /**
         Whether there is connectivity to a host, via domain name or ip address, or not.
 

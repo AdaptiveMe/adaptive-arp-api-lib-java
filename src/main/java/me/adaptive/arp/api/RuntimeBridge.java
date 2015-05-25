@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Runtime operations
    Auto-generated implementation of IRuntime specification.
 */
-public class RuntimeBridge extends BaseSystemBridge implements IRuntime, APIBridge {
+public class RuntimeBridge extends BaseSystemBridge implements IRuntime, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100272846L;
 
      /**
         API Delegate.

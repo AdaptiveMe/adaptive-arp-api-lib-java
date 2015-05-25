@@ -35,18 +35,25 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 import com.google.gson.GsonBuilder;
 
 /**
    Interface to retrieve auto-registered service implementation references.
    Auto-generated implementation of IAppRegistry specification.
 */
-public class AppRegistryBridge implements IAppRegistry {
+public class AppRegistryBridge implements IAppRegistry, Serializable {
 
      /**
         Group of API.
      */
      private IAdaptiveRPGroup apiGroup = IAdaptiveRPGroup.Kernel;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100315960L;
 
      /**
         API Delegate.

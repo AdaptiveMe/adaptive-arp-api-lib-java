@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Interface for Managing the File System operations
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface IFileSystem extends IBaseData {
+public interface IFileSystem extends IBaseData, Serializable {
      /**
         Creates a new reference to a new or existing location in the filesystem.
 This method does not create the actual file in the specified folder.

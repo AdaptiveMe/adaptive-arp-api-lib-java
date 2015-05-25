@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Structure representing a service path for one endpoint
 
@@ -41,7 +43,13 @@ package me.adaptive.arp.api;
    @since v2.0.4
    @version 1.0
 */
-public class ServicePath extends APIBean {
+public class ServicePath extends APIBean implements Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100303559L;
 
      /**
         Service endpoint type.

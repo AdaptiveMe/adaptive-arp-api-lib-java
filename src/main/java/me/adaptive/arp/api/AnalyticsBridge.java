@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Analytics purposes
    Auto-generated implementation of IAnalytics specification.
 */
-public class AnalyticsBridge extends BaseApplicationBridge implements IAnalytics, APIBridge {
+public class AnalyticsBridge extends BaseApplicationBridge implements IAnalytics, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100293316L;
 
      /**
         API Delegate.

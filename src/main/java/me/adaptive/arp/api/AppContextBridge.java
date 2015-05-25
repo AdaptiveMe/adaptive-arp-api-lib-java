@@ -35,17 +35,24 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for context management purposes
    Auto-generated implementation of IAppContext specification.
 */
-public class AppContextBridge implements IAppContext {
+public class AppContextBridge implements IAppContext, Serializable {
 
      /**
         Group of API.
      */
      private IAdaptiveRPGroup apiGroup = IAdaptiveRPGroup.Kernel;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100303506L;
 
      /**
         API Delegate.

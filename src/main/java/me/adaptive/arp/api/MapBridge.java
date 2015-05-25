@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Map operations
    Auto-generated implementation of IMap specification.
 */
-public class MapBridge extends BaseUIBridge implements IMap, APIBridge {
+public class MapBridge extends BaseUIBridge implements IMap, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100221652L;
 
      /**
         API Delegate.

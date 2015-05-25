@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Base application for Listener purposes
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface IBaseListener extends IAdaptiveRP {
+public interface IBaseListener extends IAdaptiveRP, Serializable {
      /**
         Return the unique listener identifier. This is used to check if two listeners are the same
 in every platform. This id is populated by the Javascript platform

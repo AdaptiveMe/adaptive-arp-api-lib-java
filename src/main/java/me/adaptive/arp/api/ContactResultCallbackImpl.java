@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Contact operations
    Auto-generated implementation of IContactResultCallback specification.
 */
-public class ContactResultCallbackImpl extends BaseCallbackImpl implements IContactResultCallback {
+public class ContactResultCallbackImpl extends BaseCallbackImpl implements IContactResultCallback, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100415250L;
 
      /**
         Constructor with callback id.

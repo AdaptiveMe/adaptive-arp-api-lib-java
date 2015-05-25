@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Messaging operations
    Auto-generated implementation of IMessaging specification.
 */
-public class MessagingBridge extends BasePIMBridge implements IMessaging, APIBridge {
+public class MessagingBridge extends BasePIMBridge implements IMessaging, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100290102L;
 
      /**
         API Delegate.

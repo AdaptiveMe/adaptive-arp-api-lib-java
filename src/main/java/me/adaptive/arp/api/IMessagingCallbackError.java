@@ -34,10 +34,12 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration IMessagingCallbackError
 */
-public enum IMessagingCallbackError {
+public enum IMessagingCallbackError implements Serializable {
 
      SIMNotPresent,
      EmailAccountNotFound,
@@ -45,6 +47,12 @@ public enum IMessagingCallbackError {
      WrongParams,
      NotSupported,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100424957L;
 
 }
 /**

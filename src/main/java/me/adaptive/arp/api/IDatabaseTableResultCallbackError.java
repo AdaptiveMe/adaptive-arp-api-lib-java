@@ -34,10 +34,12 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration IDatabaseTableResultCallbackError
 */
-public enum IDatabaseTableResultCallbackError {
+public enum IDatabaseTableResultCallbackError implements Serializable {
 
      NoSpace,
      ReadOnlyTable,
@@ -45,6 +47,12 @@ public enum IDatabaseTableResultCallbackError {
      DatabaseNotFound,
      NoTableFound,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100524855L;
 
 }
 /**

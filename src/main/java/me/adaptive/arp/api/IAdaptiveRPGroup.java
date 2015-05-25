@@ -34,10 +34,12 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration IAdaptiveRPGroup
 */
-public enum IAdaptiveRPGroup {
+public enum IAdaptiveRPGroup implements Serializable {
 
      Application,
      Commerce,
@@ -55,6 +57,12 @@ public enum IAdaptiveRPGroup {
      Util,
      Kernel,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100349565L;
 
 }
 /**

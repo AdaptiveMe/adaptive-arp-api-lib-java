@@ -43,11 +43,18 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
+import java.io.Serializable;
 
 /**
    INetworkReachabilityCallbackError custom serializer/deserializer.
 */
-public class INetworkReachabilityCallbackErrorAdapter implements JsonDeserializer<INetworkReachabilityCallbackError>, JsonSerializer<INetworkReachabilityCallbackError> {
+public class INetworkReachabilityCallbackErrorAdapter implements JsonDeserializer<INetworkReachabilityCallbackError>, JsonSerializer<INetworkReachabilityCallbackError>, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100537068L;
 
      @Override
      public INetworkReachabilityCallbackError deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

@@ -34,11 +34,19 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Base application for Sensor purposes
    Auto-generated implementation of IBaseSensor specification.
 */
-public class BaseSensorDelegate implements IBaseSensor {
+public class BaseSensorDelegate implements IBaseSensor, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100298693L;
 
      /**
         Group of API.

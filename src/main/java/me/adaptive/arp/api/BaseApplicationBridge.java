@@ -35,12 +35,13 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Base application for Application purposes
    Auto-generated implementation of IBaseApplication specification.
 */
-public class BaseApplicationBridge implements IBaseApplication {
+public class BaseApplicationBridge implements IBaseApplication, Serializable {
 
      /**
         Group of API.

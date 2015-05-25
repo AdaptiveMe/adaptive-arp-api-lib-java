@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the button  operations
    Auto-generated implementation of IButtonListener specification.
 */
-public class ButtonListenerImpl extends BaseListenerImpl implements IButtonListener {
+public class ButtonListenerImpl extends BaseListenerImpl implements IButtonListener, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100352128L;
 
      /**
         Constructor with listener id.

@@ -34,14 +34,22 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration ITelephonyStatus
 */
-public enum ITelephonyStatus {
+public enum ITelephonyStatus implements Serializable {
 
      Dialing,
      Failed,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100366734L;
 
 }
 /**

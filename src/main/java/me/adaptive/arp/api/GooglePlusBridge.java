@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Google Plus operations
    Auto-generated implementation of IGooglePlus specification.
 */
-public class GooglePlusBridge extends BaseSocialBridge implements IGooglePlus, APIBridge {
+public class GooglePlusBridge extends BaseSocialBridge implements IGooglePlus, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100300905L;
 
      /**
         API Delegate.

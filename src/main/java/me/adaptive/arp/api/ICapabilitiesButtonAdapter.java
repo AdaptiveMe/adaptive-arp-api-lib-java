@@ -43,11 +43,18 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
+import java.io.Serializable;
 
 /**
    ICapabilitiesButton custom serializer/deserializer.
 */
-public class ICapabilitiesButtonAdapter implements JsonDeserializer<ICapabilitiesButton>, JsonSerializer<ICapabilitiesButton> {
+public class ICapabilitiesButtonAdapter implements JsonDeserializer<ICapabilitiesButton>, JsonSerializer<ICapabilitiesButton>, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100391520L;
 
      @Override
      public ICapabilitiesButton deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

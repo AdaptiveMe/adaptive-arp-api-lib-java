@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Linkedin operations
    Auto-generated implementation of ILinkedIn specification.
 */
-public class LinkedInBridge extends BaseSocialBridge implements ILinkedIn, APIBridge {
+public class LinkedInBridge extends BaseSocialBridge implements ILinkedIn, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100271750L;
 
      /**
         API Delegate.

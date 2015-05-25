@@ -34,11 +34,19 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Base application for Media purposes
    Auto-generated implementation of IBaseMedia specification.
 */
-public class BaseMediaDelegate implements IBaseMedia {
+public class BaseMediaDelegate implements IBaseMedia, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100277525L;
 
      /**
         Group of API.

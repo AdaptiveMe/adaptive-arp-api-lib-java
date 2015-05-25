@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Telephony operations
    Auto-generated implementation of ITelephony specification.
 */
-public class TelephonyBridge extends BaseCommunicationBridge implements ITelephony, APIBridge {
+public class TelephonyBridge extends BaseCommunicationBridge implements ITelephony, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100295314L;
 
      /**
         API Delegate.

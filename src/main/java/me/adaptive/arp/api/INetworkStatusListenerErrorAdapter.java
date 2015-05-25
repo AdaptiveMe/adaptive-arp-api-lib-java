@@ -43,11 +43,18 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
+import java.io.Serializable;
 
 /**
    INetworkStatusListenerError custom serializer/deserializer.
 */
-public class INetworkStatusListenerErrorAdapter implements JsonDeserializer<INetworkStatusListenerError>, JsonSerializer<INetworkStatusListenerError> {
+public class INetworkStatusListenerErrorAdapter implements JsonDeserializer<INetworkStatusListenerError>, JsonSerializer<INetworkStatusListenerError>, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100490908L;
 
      @Override
      public INetworkStatusListenerError deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

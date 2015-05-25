@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Security result callback
    Auto-generated implementation of ISecurityResultCallback specification.
 */
-public class SecurityResultCallbackImpl extends BaseCallbackImpl implements ISecurityResultCallback {
+public class SecurityResultCallbackImpl extends BaseCallbackImpl implements ISecurityResultCallback, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100432916L;
 
      /**
         Constructor with callback id.

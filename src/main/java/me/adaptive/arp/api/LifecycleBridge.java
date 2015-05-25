@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Lifecycle listeners
    Auto-generated implementation of ILifecycle specification.
 */
-public class LifecycleBridge extends BaseApplicationBridge implements ILifecycle, APIBridge {
+public class LifecycleBridge extends BaseApplicationBridge implements ILifecycle, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100287284L;
 
      /**
         API Delegate.

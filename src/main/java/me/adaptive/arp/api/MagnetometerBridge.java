@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Magnetometer operations
    Auto-generated implementation of IMagnetometer specification.
 */
-public class MagnetometerBridge extends BaseSensorBridge implements IMagnetometer, APIBridge {
+public class MagnetometerBridge extends BaseSensorBridge implements IMagnetometer, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100326530L;
 
      /**
         API Delegate.

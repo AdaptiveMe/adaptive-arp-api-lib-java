@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Desktop operations
    Auto-generated implementation of IDesktop specification.
 */
-public class DesktopBridge extends BaseUIBridge implements IDesktop, APIBridge {
+public class DesktopBridge extends BaseUIBridge implements IDesktop, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100271590L;
 
      /**
         API Delegate.

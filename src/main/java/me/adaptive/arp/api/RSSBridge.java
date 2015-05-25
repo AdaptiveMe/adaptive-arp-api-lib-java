@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the RSS operations
    Auto-generated implementation of IRSS specification.
 */
-public class RSSBridge extends BaseSocialBridge implements IRSS, APIBridge {
+public class RSSBridge extends BaseSocialBridge implements IRSS, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100214272L;
 
      /**
         API Delegate.

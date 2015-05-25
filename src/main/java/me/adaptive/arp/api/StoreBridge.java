@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Store operations
    Auto-generated implementation of IStore specification.
 */
-public class StoreBridge extends BaseCommerceBridge implements IStore, APIBridge {
+public class StoreBridge extends BaseCommerceBridge implements IStore, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100249633L;
 
      /**
         API Delegate.

@@ -43,11 +43,18 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
+import java.io.Serializable;
 
 /**
    ContactSocialNetwork custom serializer/deserializer.
 */
-public class ContactSocialNetworkAdapter implements JsonDeserializer<ContactSocialNetwork>, JsonSerializer<ContactSocialNetwork> {
+public class ContactSocialNetworkAdapter implements JsonDeserializer<ContactSocialNetwork>, JsonSerializer<ContactSocialNetwork>, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100467655L;
 
      @Override
      public ContactSocialNetwork deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

@@ -35,12 +35,13 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Base application for Reader purposes
    Auto-generated implementation of IBaseReader specification.
 */
-public class BaseReaderBridge implements IBaseReader {
+public class BaseReaderBridge implements IBaseReader, Serializable {
 
      /**
         Group of API.

@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Object for reporting orientation change events for device and display.
 
@@ -41,7 +43,13 @@ package me.adaptive.arp.api;
    @since v2.0.5
    @version 1.0
 */
-public class RotationEvent extends APIBean {
+public class RotationEvent extends APIBean implements Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100333695L;
 
      /**
         The orientation we're rotating to. This is the future orientation when the state of the event is

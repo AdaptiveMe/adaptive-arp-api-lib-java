@@ -43,11 +43,18 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
+import java.io.Serializable;
 
 /**
    IContactPhotoResultCallbackWarning custom serializer/deserializer.
 */
-public class IContactPhotoResultCallbackWarningAdapter implements JsonDeserializer<IContactPhotoResultCallbackWarning>, JsonSerializer<IContactPhotoResultCallbackWarning> {
+public class IContactPhotoResultCallbackWarningAdapter implements JsonDeserializer<IContactPhotoResultCallbackWarning>, JsonSerializer<IContactPhotoResultCallbackWarning>, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100547668L;
 
      @Override
      public IContactPhotoResultCallbackWarning deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

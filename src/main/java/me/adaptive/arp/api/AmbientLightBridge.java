@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for managinf the Ambient Light
    Auto-generated implementation of IAmbientLight specification.
 */
-public class AmbientLightBridge extends BaseSensorBridge implements IAmbientLight, APIBridge {
+public class AmbientLightBridge extends BaseSensorBridge implements IAmbientLight, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100317944L;
 
      /**
         API Delegate.

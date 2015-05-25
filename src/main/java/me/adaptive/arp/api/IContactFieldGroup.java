@@ -34,10 +34,12 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration IContactFieldGroup
 */
-public enum IContactFieldGroup {
+public enum IContactFieldGroup implements Serializable {
 
      PersonalInfo,
      ProfessionalInfo,
@@ -48,6 +50,12 @@ public enum IContactFieldGroup {
      Socials,
      Tags,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100374479L;
 
 }
 /**

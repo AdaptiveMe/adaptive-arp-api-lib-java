@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Compression operations
    Auto-generated implementation of ICompression specification.
 */
-public class CompressionBridge extends BaseUtilBridge implements ICompression, APIBridge {
+public class CompressionBridge extends BaseUtilBridge implements ICompression, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100320098L;
 
      /**
         API Delegate.

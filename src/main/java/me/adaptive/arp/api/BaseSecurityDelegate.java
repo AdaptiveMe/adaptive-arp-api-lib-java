@@ -34,11 +34,19 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Base application for Security purposes
    Auto-generated implementation of IBaseSecurity specification.
 */
-public class BaseSecurityDelegate implements IBaseSecurity {
+public class BaseSecurityDelegate implements IBaseSecurity, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100323659L;
 
      /**
         Group of API.

@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Interface for context management purposes
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface IAppContext {
+public interface IAppContext extends Serializable {
      /**
         The main application context. This should be cast to the platform specific implementation.
 

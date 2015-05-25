@@ -34,10 +34,12 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration ICapabilitiesSensor
 */
-public enum ICapabilitiesSensor {
+public enum ICapabilitiesSensor implements Serializable {
 
      Accelerometer,
      AmbientLight,
@@ -47,6 +49,12 @@ public enum ICapabilitiesSensor {
      Magnetometer,
      Proximity,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100389874L;
 
 }
 /**

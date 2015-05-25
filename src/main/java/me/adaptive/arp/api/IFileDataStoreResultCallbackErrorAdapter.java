@@ -43,11 +43,18 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
+import java.io.Serializable;
 
 /**
    IFileDataStoreResultCallbackError custom serializer/deserializer.
 */
-public class IFileDataStoreResultCallbackErrorAdapter implements JsonDeserializer<IFileDataStoreResultCallbackError>, JsonSerializer<IFileDataStoreResultCallbackError> {
+public class IFileDataStoreResultCallbackErrorAdapter implements JsonDeserializer<IFileDataStoreResultCallbackError>, JsonSerializer<IFileDataStoreResultCallbackError>, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100528135L;
 
      @Override
      public IFileDataStoreResultCallbackError deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

@@ -34,11 +34,19 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Base application for Communication purposes
    Auto-generated implementation of IBaseCommunication specification.
 */
-public class BaseCommunicationDelegate implements IBaseCommunication {
+public class BaseCommunicationDelegate implements IBaseCommunication, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100376459L;
 
      /**
         Group of API.

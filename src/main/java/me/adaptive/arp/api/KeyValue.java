@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    General key/value holder class.
 
@@ -41,7 +43,13 @@ package me.adaptive.arp.api;
    @since 2.0.6
    @version 1.0
 */
-public class KeyValue extends APIBean {
+public class KeyValue extends APIBean implements Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100271267L;
 
      /**
         Value of the key.

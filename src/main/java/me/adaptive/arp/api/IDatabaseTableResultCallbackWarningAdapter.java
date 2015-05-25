@@ -43,11 +43,18 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
+import java.io.Serializable;
 
 /**
    IDatabaseTableResultCallbackWarning custom serializer/deserializer.
 */
-public class IDatabaseTableResultCallbackWarningAdapter implements JsonDeserializer<IDatabaseTableResultCallbackWarning>, JsonSerializer<IDatabaseTableResultCallbackWarning> {
+public class IDatabaseTableResultCallbackWarningAdapter implements JsonDeserializer<IDatabaseTableResultCallbackWarning>, JsonSerializer<IDatabaseTableResultCallbackWarning>, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100544593L;
 
      @Override
      public IDatabaseTableResultCallbackWarning deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

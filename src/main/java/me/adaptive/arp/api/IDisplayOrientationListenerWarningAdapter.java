@@ -43,11 +43,18 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
+import java.io.Serializable;
 
 /**
    IDisplayOrientationListenerWarning custom serializer/deserializer.
 */
-public class IDisplayOrientationListenerWarningAdapter implements JsonDeserializer<IDisplayOrientationListenerWarning>, JsonSerializer<IDisplayOrientationListenerWarning> {
+public class IDisplayOrientationListenerWarningAdapter implements JsonDeserializer<IDisplayOrientationListenerWarning>, JsonSerializer<IDisplayOrientationListenerWarning>, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100561316L;
 
      @Override
      public IDisplayOrientationListenerWarning deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

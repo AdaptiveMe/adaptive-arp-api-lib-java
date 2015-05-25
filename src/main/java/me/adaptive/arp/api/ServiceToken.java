@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Object representing a specific service, path, function and invocation method for accessing external services.
 
@@ -41,7 +43,13 @@ package me.adaptive.arp.api;
    @since v2.0.6
    @version 1.0
 */
-public class ServiceToken extends APIBean {
+public class ServiceToken extends APIBean implements Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100316605L;
 
      /**
         Http method to be used by the invocation - this is typically GET or POST albeit the platform may support

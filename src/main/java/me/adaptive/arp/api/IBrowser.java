@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Interface for Managing the browser operations
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface IBrowser extends IBaseUI {
+public interface IBrowser extends IBaseUI, Serializable {
      /**
         Method for opening a URL like a link in the native default browser
 

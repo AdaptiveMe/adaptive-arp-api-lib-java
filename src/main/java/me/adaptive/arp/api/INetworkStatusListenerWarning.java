@@ -34,14 +34,22 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration INetworkStatusListenerWarning
 */
-public enum INetworkStatusListenerWarning {
+public enum INetworkStatusListenerWarning implements Serializable {
 
      IpAddressNotAssigned,
      IpAddressChanged,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100510646L;
 
 }
 /**

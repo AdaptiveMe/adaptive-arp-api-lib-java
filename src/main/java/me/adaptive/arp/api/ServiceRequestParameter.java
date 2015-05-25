@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Object representing a request parameter.
 
@@ -41,7 +43,13 @@ package me.adaptive.arp.api;
    @since 2.0.6
    @version 1.0
 */
-public class ServiceRequestParameter extends KeyValue {
+public class ServiceRequestParameter extends KeyValue implements Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100440692L;
 
 
      /**

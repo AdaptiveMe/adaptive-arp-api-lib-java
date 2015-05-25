@@ -34,15 +34,23 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration ICapabilitiesData
 */
-public enum ICapabilitiesData {
+public enum ICapabilitiesData implements Serializable {
 
      Database,
      File,
      Cloud,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100359040L;
 
 }
 /**

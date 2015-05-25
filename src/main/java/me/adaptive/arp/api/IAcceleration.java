@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Interface defining methods about the acceleration sensor
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface IAcceleration extends IBaseSensor {
+public interface IAcceleration extends IBaseSensor, Serializable {
      /**
         Register a new listener that will receive acceleration events.
 

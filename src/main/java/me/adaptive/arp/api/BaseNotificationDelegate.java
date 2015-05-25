@@ -34,11 +34,19 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Base application for Notification purposes
    Auto-generated implementation of IBaseNotification specification.
 */
-public class BaseNotificationDelegate implements IBaseNotification {
+public class BaseNotificationDelegate implements IBaseNotification, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100363388L;
 
      /**
         Group of API.

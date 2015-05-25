@@ -43,11 +43,18 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
+import java.io.Serializable;
 
 /**
    IServiceCertificateValidation custom serializer/deserializer.
 */
-public class IServiceCertificateValidationAdapter implements JsonDeserializer<IServiceCertificateValidation>, JsonSerializer<IServiceCertificateValidation> {
+public class IServiceCertificateValidationAdapter implements JsonDeserializer<IServiceCertificateValidation>, JsonSerializer<IServiceCertificateValidation>, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100494371L;
 
      @Override
      public IServiceCertificateValidation deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

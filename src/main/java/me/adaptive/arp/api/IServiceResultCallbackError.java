@@ -34,10 +34,12 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration IServiceResultCallbackError
 */
-public enum IServiceResultCallbackError {
+public enum IServiceResultCallbackError implements Serializable {
 
      TimeOut,
      NoResponse,
@@ -45,6 +47,12 @@ public enum IServiceResultCallbackError {
      MalformedUrl,
      NotRegisteredService,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100472621L;
 
 }
 /**

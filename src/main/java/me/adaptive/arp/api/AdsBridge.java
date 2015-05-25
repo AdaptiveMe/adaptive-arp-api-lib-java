@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Advertising purposes
    Auto-generated implementation of IAds specification.
 */
-public class AdsBridge extends BaseCommerceBridge implements IAds, APIBridge {
+public class AdsBridge extends BaseCommerceBridge implements IAds, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100221220L;
 
      /**
         API Delegate.

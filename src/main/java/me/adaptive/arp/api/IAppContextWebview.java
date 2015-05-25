@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Interface for webview context management purposes
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface IAppContextWebview {
+public interface IAppContextWebview extends Serializable {
      /**
         Additional views may be added to an application - a separate activity - and if these will make calls to the
 ARP methods, they must be registered by adding them to the context. When they are added to the context, ARP

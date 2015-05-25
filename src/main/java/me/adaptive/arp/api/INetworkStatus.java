@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Interface for Managing the Network status
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface INetworkStatus extends IBaseCommunication {
+public interface INetworkStatus extends IBaseCommunication, Serializable {
      /**
         Add the listener for network status changes of the app
 

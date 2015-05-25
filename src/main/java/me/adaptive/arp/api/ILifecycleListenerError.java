@@ -34,15 +34,23 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration ILifecycleListenerError
 */
-public enum ILifecycleListenerError {
+public enum ILifecycleListenerError implements Serializable {
 
      Runtime,
      Implementation,
      Killed,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100433630L;
 
 }
 /**

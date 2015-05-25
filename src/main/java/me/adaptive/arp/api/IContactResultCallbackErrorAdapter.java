@@ -43,11 +43,18 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
+import java.io.Serializable;
 
 /**
    IContactResultCallbackError custom serializer/deserializer.
 */
-public class IContactResultCallbackErrorAdapter implements JsonDeserializer<IContactResultCallbackError>, JsonSerializer<IContactResultCallbackError> {
+public class IContactResultCallbackErrorAdapter implements JsonDeserializer<IContactResultCallbackError>, JsonSerializer<IContactResultCallbackError>, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100472616L;
 
      @Override
      public IContactResultCallbackError deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Network status
    Auto-generated implementation of INetworkStatus specification.
 */
-public class NetworkStatusBridge extends BaseCommunicationBridge implements INetworkStatus, APIBridge {
+public class NetworkStatusBridge extends BaseCommunicationBridge implements INetworkStatus, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100344562L;
 
      /**
         API Delegate.

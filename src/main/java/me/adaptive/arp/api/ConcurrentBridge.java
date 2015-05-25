@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Concurrent operations
    Auto-generated implementation of IConcurrent specification.
 */
-public class ConcurrentBridge extends BaseUtilBridge implements IConcurrent, APIBridge {
+public class ConcurrentBridge extends BaseUtilBridge implements IConcurrent, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100307919L;
 
      /**
         API Delegate.

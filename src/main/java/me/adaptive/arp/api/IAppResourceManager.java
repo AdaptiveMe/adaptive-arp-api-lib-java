@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    The IAppResourceManager is the interface that must be followed for the implementation of secure resource
 reading from the application data container. Implementations of this class should provide the logic
@@ -45,7 +47,7 @@ the ResourceData and formats returned must be coherent between platforms.
    @since v2.1.3
    @version 1.0
 */
-public interface IAppResourceManager {
+public interface IAppResourceManager extends Serializable {
      /**
         Retrieve a configuration resource from the secure application data container.
 

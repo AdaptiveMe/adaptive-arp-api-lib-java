@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Implementation of FileDescriptor bean.
 
@@ -41,7 +43,13 @@ package me.adaptive.arp.api;
    @since 1.0
    @version 1.0
 */
-public class FileDescriptor extends APIBean {
+public class FileDescriptor extends APIBean implements Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100339420L;
 
      private long dateCreated;
      private long dateModified;

@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Imaging operations
    Auto-generated implementation of IImaging specification.
 */
-public class ImagingBridge extends BaseMediaBridge implements IImaging, APIBridge {
+public class ImagingBridge extends BaseMediaBridge implements IImaging, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100264732L;
 
      /**
         API Delegate.

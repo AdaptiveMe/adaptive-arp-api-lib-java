@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Base application for Listener purposes
    Auto-generated implementation of IBaseListener specification.
 */
-public class BaseListenerImpl implements IBaseListener {
+public class BaseListenerImpl implements IBaseListener, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100319941L;
 
      /**
         Unique id of listener.

@@ -35,17 +35,24 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for webview context management purposes
    Auto-generated implementation of IAppContextWebview specification.
 */
-public class AppContextWebviewBridge implements IAppContextWebview {
+public class AppContextWebviewBridge implements IAppContextWebview, Serializable {
 
      /**
         Group of API.
      */
      private IAdaptiveRPGroup apiGroup = IAdaptiveRPGroup.Kernel;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100380191L;
 
      /**
         API Delegate.

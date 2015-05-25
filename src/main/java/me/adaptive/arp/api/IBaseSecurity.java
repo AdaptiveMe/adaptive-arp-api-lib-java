@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Base application for Security purposes
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface IBaseSecurity extends IAdaptiveRP {
+public interface IBaseSecurity extends IAdaptiveRP, Serializable {
 }
 
 /**

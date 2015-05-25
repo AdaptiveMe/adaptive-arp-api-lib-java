@@ -34,10 +34,12 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration ICapabilitiesMedia
 */
-public enum ICapabilitiesMedia {
+public enum ICapabilitiesMedia implements Serializable {
 
      AudioPlayback,
      AudioRecording,
@@ -45,6 +47,12 @@ public enum ICapabilitiesMedia {
      VideoPlayback,
      VideoRecording,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100368706L;
 
 }
 /**

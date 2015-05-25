@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Local Notifications operations
    Auto-generated implementation of INotificationLocal specification.
 */
-public class NotificationLocalBridge extends BaseNotificationBridge implements INotificationLocal, APIBridge {
+public class NotificationLocalBridge extends BaseNotificationBridge implements INotificationLocal, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100375168L;
 
      /**
         API Delegate.

@@ -34,15 +34,23 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration ContactEmailType
 */
-public enum ContactEmailType {
+public enum ContactEmailType implements Serializable {
 
      Personal,
      Work,
      Other,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100406691L;
 
 }
 /**

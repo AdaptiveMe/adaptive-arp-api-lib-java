@@ -43,11 +43,18 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
+import java.io.Serializable;
 
 /**
    IServiceType custom serializer/deserializer.
 */
-public class IServiceTypeAdapter implements JsonDeserializer<IServiceType>, JsonSerializer<IServiceType> {
+public class IServiceTypeAdapter implements JsonDeserializer<IServiceType>, JsonSerializer<IServiceType>, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100314545L;
 
      @Override
      public IServiceType deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

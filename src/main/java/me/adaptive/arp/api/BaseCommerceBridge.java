@@ -35,12 +35,13 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Base application for Commerce purposes
    Auto-generated implementation of IBaseCommerce specification.
 */
-public class BaseCommerceBridge implements IBaseCommerce {
+public class BaseCommerceBridge implements IBaseCommerce, Serializable {
 
      /**
         Group of API.

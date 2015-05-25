@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Device operations
    Auto-generated implementation of IDevice specification.
 */
-public class DeviceBridge extends BaseSystemBridge implements IDevice, APIBridge {
+public class DeviceBridge extends BaseSystemBridge implements IDevice, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100253546L;
 
      /**
         API Delegate.

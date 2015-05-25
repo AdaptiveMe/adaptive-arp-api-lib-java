@@ -34,11 +34,19 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Base application for PIM purposes
    Auto-generated implementation of IBasePIM specification.
 */
-public class BasePIMDelegate implements IBasePIM {
+public class BasePIMDelegate implements IBasePIM, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100248619L;
 
      /**
         Group of API.

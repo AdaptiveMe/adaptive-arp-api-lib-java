@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Wallet operations
    Auto-generated implementation of IWallet specification.
 */
-public class WalletBridge extends BaseCommerceBridge implements IWallet, APIBridge {
+public class WalletBridge extends BaseCommerceBridge implements IWallet, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100257733L;
 
      /**
         API Delegate.

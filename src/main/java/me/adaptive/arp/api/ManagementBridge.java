@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Management operations
    Auto-generated implementation of IManagement specification.
 */
-public class ManagementBridge extends BaseApplicationBridge implements IManagement, APIBridge {
+public class ManagementBridge extends BaseApplicationBridge implements IManagement, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100299065L;
 
      /**
         API Delegate.

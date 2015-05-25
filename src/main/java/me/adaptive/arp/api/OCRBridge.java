@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the OCR operations
    Auto-generated implementation of IOCR specification.
 */
-public class OCRBridge extends BaseReaderBridge implements IOCR, APIBridge {
+public class OCRBridge extends BaseReaderBridge implements IOCR, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100211224L;
 
      /**
         API Delegate.

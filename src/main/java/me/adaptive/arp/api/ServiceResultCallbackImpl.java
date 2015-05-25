@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Services operations
    Auto-generated implementation of IServiceResultCallback specification.
 */
-public class ServiceResultCallbackImpl extends BaseCallbackImpl implements IServiceResultCallback {
+public class ServiceResultCallbackImpl extends BaseCallbackImpl implements IServiceResultCallback, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100415255L;
 
      /**
         Constructor with callback id.

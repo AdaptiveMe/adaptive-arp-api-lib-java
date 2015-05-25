@@ -34,14 +34,22 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration IAccelerationListenerError
 */
-public enum IAccelerationListenerError {
+public enum IAccelerationListenerError implements Serializable {
 
      Unauthorized,
      Unavailable,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100467316L;
 
 }
 /**

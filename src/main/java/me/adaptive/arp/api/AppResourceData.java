@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    This class represents a resource provided by the platform from the application's secure payload.
 
@@ -41,7 +43,13 @@ package me.adaptive.arp.api;
    @since v2.1.3
    @version 1.0
 */
-public class AppResourceData {
+public class AppResourceData implements Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100343810L;
 
      /**
         Marker to indicate whether the resource is cooked in some way (compressed, encrypted, etc.) If true, the

@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the UI operations
    Auto-generated implementation of IUI specification.
 */
-public class UIBridge extends BaseUIBridge implements IUI, APIBridge {
+public class UIBridge extends BaseUIBridge implements IUI, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100206324L;
 
      /**
         API Delegate.

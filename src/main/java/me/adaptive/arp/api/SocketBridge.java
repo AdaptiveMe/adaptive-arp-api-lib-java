@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Socket operations
    Auto-generated implementation of ISocket specification.
 */
-public class SocketBridge extends BaseCommunicationBridge implements ISocket, APIBridge {
+public class SocketBridge extends BaseCommunicationBridge implements ISocket, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100257887L;
 
      /**
         API Delegate.

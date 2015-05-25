@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Alarm purposes
    Auto-generated implementation of IAlarm specification.
 */
-public class AlarmBridge extends BaseNotificationBridge implements IAlarm, APIBridge {
+public class AlarmBridge extends BaseNotificationBridge implements IAlarm, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100243945L;
 
      /**
         API Delegate.

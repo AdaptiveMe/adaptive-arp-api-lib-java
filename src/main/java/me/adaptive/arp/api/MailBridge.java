@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Mail operations
    Auto-generated implementation of IMail specification.
 */
-public class MailBridge extends BasePIMBridge implements IMail, APIBridge {
+public class MailBridge extends BasePIMBridge implements IMail, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100231797L;
 
      /**
         API Delegate.

@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    This is a marker interface for bridge classes that invoke delegates.
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since 1.0
    @version 1.0
 */
-public interface APIBridge {
+public interface APIBridge extends Serializable {
      /**
         Invokes the given method specified in the API request object.
 

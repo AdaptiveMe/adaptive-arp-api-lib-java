@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Interface for Managing the Geolocation operations
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface IGeolocation extends IBaseSensor {
+public interface IGeolocation extends IBaseSensor, Serializable {
      /**
         Register a new listener that will receive geolocation events.
 

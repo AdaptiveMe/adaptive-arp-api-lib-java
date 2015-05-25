@@ -34,13 +34,21 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration IButtonListenerError
 */
-public enum IButtonListenerError {
+public enum IButtonListenerError implements Serializable {
 
      NotPresent,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100409494L;
 
 }
 /**

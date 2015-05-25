@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the OpenID operations
    Auto-generated implementation of IOpenId specification.
 */
-public class OpenIdBridge extends BaseSecurityBridge implements IOpenId, APIBridge {
+public class OpenIdBridge extends BaseSecurityBridge implements IOpenId, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100250185L;
 
      /**
         API Delegate.

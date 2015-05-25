@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Interface for Managing the Display operations
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface IDisplay extends IBaseSystem {
+public interface IDisplay extends IBaseSystem, Serializable {
      /**
         Add a listener to start receiving display orientation change events.
 

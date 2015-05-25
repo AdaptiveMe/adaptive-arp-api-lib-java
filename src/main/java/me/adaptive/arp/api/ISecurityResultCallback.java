@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Interface for Managing the Security result callback
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface ISecurityResultCallback extends IBaseCallback {
+public interface ISecurityResultCallback extends IBaseCallback, Serializable {
      /**
         No data received - error condition, not authorized .
 

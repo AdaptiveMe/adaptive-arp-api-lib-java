@@ -34,14 +34,22 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Enumeration IFileListResultCallbackError
 */
-public enum IFileListResultCallbackError {
+public enum IFileListResultCallbackError implements Serializable {
 
      InexistentFile,
      Unauthorized,
      Unknown;
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100478856L;
 
 }
 /**

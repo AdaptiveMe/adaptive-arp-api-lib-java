@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Interface for testing the Capabilities operations
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface ICapabilities extends IBaseSystem {
+public interface ICapabilities extends IBaseSystem, Serializable {
      /**
         Obtains the default orientation of the device/display. If no default orientation is available on
 the platform, this method will return the current orientation. To capture device or display orientation

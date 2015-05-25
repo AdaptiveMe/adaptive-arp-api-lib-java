@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Interface for handling display orientation change events.
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0.5
    @version 1.0
 */
-public interface IDisplayOrientationListener extends IBaseListener {
+public interface IDisplayOrientationListener extends IBaseListener, Serializable {
      /**
         Although extremely unlikely, this event will be fired if something beyond the control of the
 platform impedes the rotation of the display.

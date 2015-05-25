@@ -43,11 +43,18 @@ import com.google.gson.JsonPrimitive;
 import com.google.gson.JsonSerializationContext;
 import com.google.gson.JsonSerializer;
 import java.lang.reflect.Type;
+import java.io.Serializable;
 
 /**
    IContactFieldGroup custom serializer/deserializer.
 */
-public class IContactFieldGroupAdapter implements JsonDeserializer<IContactFieldGroup>, JsonSerializer<IContactFieldGroup> {
+public class IContactFieldGroupAdapter implements JsonDeserializer<IContactFieldGroup>, JsonSerializer<IContactFieldGroup>, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100374479L;
 
      @Override
      public IContactFieldGroup deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {

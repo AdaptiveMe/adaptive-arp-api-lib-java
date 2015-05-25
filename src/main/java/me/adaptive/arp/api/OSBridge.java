@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the OS operations
    Auto-generated implementation of IOS specification.
 */
-public class OSBridge extends BaseSystemBridge implements IOS, APIBridge {
+public class OSBridge extends BaseSystemBridge implements IOS, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100206900L;
 
      /**
         API Delegate.

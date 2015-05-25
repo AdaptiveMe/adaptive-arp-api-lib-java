@@ -34,6 +34,8 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Interface for Managing the Lifecycle listeners
 
@@ -41,7 +43,7 @@ package me.adaptive.arp.api;
    @since v2.0
    @version 1.0
 */
-public interface ILifecycleListener extends IBaseListener {
+public interface ILifecycleListener extends IBaseListener, Serializable {
      /**
         No data received - error condition, not authorized or hardware not available.
 

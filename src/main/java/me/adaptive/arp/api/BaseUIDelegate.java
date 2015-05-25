@@ -34,11 +34,19 @@ Release:
 
 package me.adaptive.arp.api;
 
+import java.io.Serializable;
+
 /**
    Base application for UI purposes
    Auto-generated implementation of IBaseUI specification.
 */
-public class BaseUIDelegate implements IBaseUI {
+public class BaseUIDelegate implements IBaseUI, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100243515L;
 
      /**
         Group of API.

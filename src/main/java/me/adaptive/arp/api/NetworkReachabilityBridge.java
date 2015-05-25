@@ -35,12 +35,19 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Interface for Managing the Network reachability operations
    Auto-generated implementation of INetworkReachability specification.
 */
-public class NetworkReachabilityBridge extends BaseCommunicationBridge implements INetworkReachability, APIBridge {
+public class NetworkReachabilityBridge extends BaseCommunicationBridge implements INetworkReachability, APIBridge, Serializable {
+
+     /**
+        Java serialization support.
+        @since 2.2.13
+     */
+     private static final long serialVersionUID = 100402213L;
 
      /**
         API Delegate.

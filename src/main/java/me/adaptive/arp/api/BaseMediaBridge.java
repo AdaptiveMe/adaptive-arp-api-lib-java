@@ -35,12 +35,13 @@ Release:
 package me.adaptive.arp.api;
 
 import com.google.gson.Gson;
+import java.io.Serializable;
 
 /**
    Base application for Media purposes
    Auto-generated implementation of IBaseMedia specification.
 */
-public class BaseMediaBridge implements IBaseMedia {
+public class BaseMediaBridge implements IBaseMedia, Serializable {
 
      /**
         Group of API.
