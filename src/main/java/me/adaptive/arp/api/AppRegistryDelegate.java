@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.13
+    * @version v2.2.14
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -1197,7 +1197,7 @@ public class AppRegistryDelegate implements IAppRegistry, Serializable {
         Method that returns the API version of the implementation.
      */
      public String getAPIVersion() {
-          return "v2.2.13";
+          return "v2.2.14";
      }
 
      /**
