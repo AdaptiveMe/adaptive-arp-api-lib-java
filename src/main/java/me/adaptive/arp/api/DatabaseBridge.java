@@ -27,7 +27,7 @@ Contributors:
 
 Release:
 
-    * @version v2.2.14
+    * @version v2.2.15
 
 -------------------------------------------| aut inveniam viam aut faciam |--------------------------------------------
 */
@@ -336,7 +336,7 @@ should be passed as a parameter
                default:
                     // 404 - response null.
                     responseCode = 404;
-                    responseMessage = "DatabaseBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.14.";
+                    responseMessage = "DatabaseBridge does not provide the function '"+request.getMethodName()+"' Please check your client-side API version; should be API version >= v2.2.15.";
           }
           response.setResponse(responseJSON);
           response.setStatusCode(responseCode);
