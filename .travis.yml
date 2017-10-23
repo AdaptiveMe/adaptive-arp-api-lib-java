@@ -1,4 +1,4 @@
-sudo: false
+sudo: false 
 language: java
 before_install:
 - export GIT_TAG=`git describe --abbrev=0`
